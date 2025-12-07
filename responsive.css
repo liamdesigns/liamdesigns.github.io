@@ -67,6 +67,28 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 24px;
     }
+    
+    /* Quote builder - client info grid */
+    .client-info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Package selector - 3 columns still on tablet but tighter */
+    .package-selector {
+        gap: 16px;
+    }
+    
+    .package-option-content {
+        padding: 20px 16px;
+    }
+    
+    .package-option-content h4 {
+        font-size: 1.125rem;
+    }
+    
+    .package-price {
+        font-size: 1.5rem;
+    }
 }
 
 /* ===================================
@@ -277,6 +299,81 @@
     .contact-form {
         padding: 32px 24px;
     }
+    
+    /* ===== QUOTE BUILDER MOBILE FIXES ===== */
+    
+    /* Quote step container */
+    .quote-step {
+        padding: 24px 16px;
+        margin-bottom: 20px;
+    }
+    
+    .quote-step-title {
+        font-size: 1.25rem;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+    
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        flex-shrink: 0;
+    }
+    
+    /* Client info - stack vertically */
+    .client-info-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .form-group {
+        margin-bottom: 0;
+    }
+    
+    .form-label {
+        font-size: 0.875rem;
+        margin-bottom: 6px;
+    }
+    
+    .form-input {
+        padding: 12px;
+        font-size: 1rem;
+    }
+    
+    /* Package selector - single column on mobile */
+    .package-selector {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-bottom: 40px;
+    }
+    
+    .package-option-content {
+        padding: 20px;
+    }
+    
+    .package-option-content h4 {
+        font-size: 1.25rem;
+        margin-bottom: 8px;
+    }
+    
+    .package-price {
+        font-size: 1.75rem;
+        margin-bottom: 16px;
+    }
+    
+    .package-features-list {
+        font-size: 0.875rem;
+    }
+    
+    .package-features-list li {
+        padding: 6px 0;
+        padding-left: 24px;
+    }
+    
+    .package-features-list li::before {
+        font-size: 0.75rem;
+    }
 }
 
 /* ===================================
@@ -413,6 +510,65 @@
     .flip-btn {
         padding: 5px 12px;
         font-size: 0.75rem;
+    }
+    
+    /* ===== QUOTE BUILDER SMALL MOBILE ===== */
+    
+    .quote-step {
+        padding: 20px 14px;
+        border-radius: 12px;
+    }
+    
+    .quote-step-title {
+        font-size: 1.125rem;
+        gap: 10px;
+        margin-bottom: 16px;
+    }
+    
+    .step-number {
+        width: 36px;
+        height: 36px;
+        font-size: 0.9375rem;
+    }
+    
+    .form-input {
+        padding: 10px 12px;
+        font-size: 0.9375rem;
+    }
+    
+    .package-option-content {
+        padding: 16px;
+    }
+    
+    .package-option-content h4 {
+        font-size: 1.125rem;
+    }
+    
+    .package-price {
+        font-size: 1.5rem;
+    }
+    
+    .package-features-list li {
+        font-size: 0.8125rem;
+        padding: 5px 0;
+    }
+    
+    /* Extras on small mobile */
+    .extras-grid {
+        gap: 16px;
+    }
+    
+    .extra-option {
+        height: auto;
+        min-height: 160px;
+    }
+    
+    .extra-face {
+        padding: 16px;
+    }
+    
+    .extra-content h5 {
+        font-size: 0.9375rem;
     }
     
     /* Fiverr Mega CTA */
