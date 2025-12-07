@@ -551,6 +551,7 @@
     .package-features-list li {
         font-size: 0.8125rem;
         padding: 5px 0;
+        padding-left: 28px;
     }
     
     /* Extras on small mobile */
