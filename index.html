@@ -41,8 +41,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles.css?v=20251205">
-    <link rel="stylesheet" href="responsive.css?v=20251205">
+    <link rel="stylesheet" href="styles.css?v=20251207">
+    <link rel="stylesheet" href="responsive.css?v=20251207">
     
     <!-- jsPDF for quote PDF generation -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
@@ -88,11 +88,11 @@
                 <li class="nav-item"><a href="#fiverr" class="nav-btn">Hire Me</a></li>
             </ul>
             
-            <div class="nav-toggle" id="navToggle">
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </nav>
     </header>
     
@@ -118,7 +118,7 @@
                 </p>
                 <div class="hero-buttons">
                     <a href="#quote" class="btn btn-glow btn-large">Get Your Quote</a>
-                    <a href="#portfolio" class="btn btn-outline-light btn-large">View Portfolio</a>
+                    <a href="#portfolio" class="btn btn-outline-light btn-large">View My Work</a>
                 </div>
             </div>
             
@@ -190,7 +190,7 @@
                 
                 <div class="fiverr-mega-title">
                     <span class="fiverr-title-accent">Ready to Start Your Project?</span>
-                    <span class="fiverr-title-main">Hire Me on Fiverr Today</span>
+                    <h2 class="fiverr-title-main">Hire Me on Fiverr Today</h2>
                 </div>
                 
                 <p class="fiverr-mega-description">
@@ -268,9 +268,9 @@
             <div class="portfolio-grid">
                 <div class="portfolio-item">
                     <div class="portfolio-image">
-                        <img src="portfolio/Velion.png" alt="VELION - Clean, Modern Finance Platform" class="portfolio-screenshot">
+                        <img src="portfolio/Velion.png" alt="VELION - Clean, Modern Finance Platform" class="portfolio-screenshot" width="600" height="400" loading="lazy">
                         <div class="portfolio-overlay">
-                            <a href="portfolio/Velion/" class="portfolio-btn">View Live Demo</a>
+                            <a href="portfolio/Velion/" class="portfolio-btn">View VELION Demo</a>
                         </div>
                     </div>
                     <div class="portfolio-info">
@@ -282,9 +282,9 @@
                 
                 <div class="portfolio-item">
                     <div class="portfolio-image">
-                        <img src="portfolio/NovaFrame.png" alt="NovaFrame - Sleek, High Tech Engineering Website" class="portfolio-screenshot">
+                        <img src="portfolio/NovaFrame.png" alt="NovaFrame - Sleek, High Tech Engineering Website" class="portfolio-screenshot" width="600" height="400" loading="lazy">
                         <div class="portfolio-overlay">
-                            <a href="portfolio/NovaFrame/" class="portfolio-btn">View Live Demo</a>
+                            <a href="portfolio/NovaFrame/" class="portfolio-btn">View NovaFrame Demo</a>
                         </div>
                     </div>
                     <div class="portfolio-info">
@@ -296,9 +296,9 @@
                 
                 <div class="portfolio-item">
                     <div class="portfolio-image">
-                        <img src="portfolio/BrightWave.png" alt="BrightWave Electrical - Modern, Trust Focused Electrician Website" class="portfolio-screenshot">
+                        <img src="portfolio/BrightWave.png" alt="BrightWave Electrical - Modern, Trust Focused Electrician Website" class="portfolio-screenshot" width="600" height="400" loading="lazy">
                         <div class="portfolio-overlay">
-                            <a href="portfolio/BrightWave/" class="portfolio-btn">View Live Demo</a>
+                            <a href="portfolio/BrightWave/" class="portfolio-btn">View BrightWave Demo</a>
                         </div>
                     </div>
                     <div class="portfolio-info">
@@ -330,20 +330,20 @@
                     </h3>
                     <div class="client-info-grid">
                         <div class="form-group">
-                            <label class="form-label">Your Name *</label>
-                            <input type="text" id="clientName" class="form-input" placeholder="John Smith" required>
+                            <label for="clientName" class="form-label">Your Name *</label>
+                            <input type="text" id="clientName" name="clientName" class="form-input" placeholder="John Smith" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Business Name *</label>
-                            <input type="text" id="businessName" class="form-input" placeholder="Your Company Ltd" required>
+                            <label for="businessName" class="form-label">Business Name *</label>
+                            <input type="text" id="businessName" name="businessName" class="form-input" placeholder="Your Company Ltd" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Email Address *</label>
-                            <input type="email" id="clientEmail" class="form-input" placeholder="you@example.com" required>
+                            <label for="clientEmail" class="form-label">Email Address *</label>
+                            <input type="email" id="clientEmail" name="clientEmail" class="form-input" placeholder="you@example.com" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Currency</label>
-                            <select id="currencySelector" class="form-input">
+                            <label for="currencySelector" class="form-label">Currency</label>
+                            <select id="currencySelector" name="currency" class="form-input">
                                 <option value="GBP" selected>🇬🇧 British Pound (£)</option>
                                 <option value="USD">🇺🇸 US Dollar ($)</option>
                                 <option value="EUR">🇪🇺 Euro (€)</option>
@@ -390,7 +390,6 @@
                             <li>Fully responsive design (desktop, tablet and mobile)</li>
                             <li>Basic SEO setup</li>
                             <li>Sticky navbar that stays visible for easier navigation and better conversions</li>
-                            <li>Contact form with Formspree (50 free submissions), favicon, GitHub Pages hosting setup, HTTPS encryption and speed optimisation included</li>
                             <li>2 revisions, delivery in 2 days</li>
                         </ul>
                     </div>
@@ -408,6 +407,7 @@
                             <li>Logo design</li>
                             <li>GA4 analytics setup with GDPR cookie banner</li>
                             <li>sitemap.xml and robots.txt included</li>
+							<li>Contact form with Formspree (50 free submissions), favicon, GitHub Pages hosting setup, HTTPS encryption and speed optimisation included</li>
                             <li>3 revisions, delivery in 3 to 4 days</li>
                         </ul>
                     </div>
@@ -792,9 +792,9 @@
         <div class="faq-list">
 
             <div class="faq-item">
-                <button class="faq-question">
+                <button class="faq-question" aria-expanded="false">
                     <span>What do your packages include?</span>
-                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/>
                     </svg>
                 </button>
@@ -809,9 +809,9 @@
             </div>
 
             <div class="faq-item">
-                <button class="faq-question">
+                <button class="faq-question" aria-expanded="false">
                     <span>How long does a project take?</span>
-                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/>
                     </svg>
                 </button>
@@ -825,9 +825,9 @@
             </div>
 
             <div class="faq-item">
-                <button class="faq-question">
+                <button class="faq-question" aria-expanded="false">
                     <span>Do you provide hosting?</span>
-                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/>
                     </svg>
                 </button>
@@ -841,9 +841,9 @@
             </div>
 
             <div class="faq-item">
-                <button class="faq-question">
+                <button class="faq-question" aria-expanded="false">
                     <span>Can you build any style of website?</span>
-                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/>
                     </svg>
                 </button>
@@ -857,9 +857,9 @@
             </div>
 
             <div class="faq-item">
-                <button class="faq-question">
+                <button class="faq-question" aria-expanded="false">
                     <span>Can I make changes to the site after delivery?</span>
-                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/>
                     </svg>
                 </button>
@@ -873,9 +873,9 @@
             </div>
 
             <div class="faq-item">
-                <button class="faq-question">
+                <button class="faq-question" aria-expanded="false">
                     <span>Do you offer revisions?</span>
-                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/>
                     </svg>
                 </button>
@@ -1026,7 +1026,7 @@
     });
 </script>
 
-    <script src="script.js?v=20251205"></script>
+    <script src="script.js?v=20251207" defer></script>
     
 </body>
 </html>

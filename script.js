@@ -623,8 +623,9 @@ const packageFeatures = {
     
     if (navToggle) {
         navToggle.addEventListener('click', function() {
-            navToggle.classList.toggle('active');
+            const isActive = navToggle.classList.toggle('active');
             navMenu.classList.toggle('active');
+            navToggle.setAttribute('aria-expanded', isActive ? 'true' : 'false');
             document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
         });
     }
@@ -633,6 +634,7 @@ const packageFeatures = {
         link.addEventListener('click', function() {
             navToggle.classList.remove('active');
             navMenu.classList.remove('active');
+            if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
             document.body.style.overflow = '';
         });
     });
@@ -683,9 +685,12 @@ const packageFeatures = {
             faqItems.forEach(otherItem => {
                 if (otherItem !== item && otherItem.classList.contains('active')) {
                     otherItem.classList.remove('active');
+                    const otherQuestion = otherItem.querySelector('.faq-question');
+                    if (otherQuestion) otherQuestion.setAttribute('aria-expanded', 'false');
                 }
             });
-            item.classList.toggle('active');
+            const isActive = item.classList.toggle('active');
+            question.setAttribute('aria-expanded', isActive ? 'true' : 'false');
         });
     });
     

@@ -11,7 +11,8 @@
     --color-accent-hover: #1da5e6;
     --color-accent-glow: rgba(40, 191, 255, 0.4);
     --color-text-primary: #f3f4f6;
-    --color-text-secondary: #9ca3af;
+    --color-text-secondary: #b0b8c4;
+    --color-text-muted: #8a939f;
     --color-border: #374151;
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --container-width: 1200px;
@@ -60,12 +61,6 @@ body.no-scroll {
     overflow: hidden;
 }
 
-.hero, .fiverr-cta-mega, .portfolio, .quote-builder, .process, .about, .faq, .contact {
-    will-change: transform, opacity;
-    transform: translateZ(0);
-    backface-visibility: hidden;
-}
-
 img {
     max-width: 100%;
     height: auto;
@@ -97,6 +92,17 @@ button {
 .section-header {
     text-align: center;
     margin-bottom: 60px;
+}
+
+/* Performance: Defer rendering of below-fold sections */
+.portfolio,
+.quote-builder,
+.process,
+.about,
+.faq,
+.contact {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 800px;
 }
 
 .section-title {
@@ -135,7 +141,7 @@ button {
 
 .btn-primary {
     background: var(--color-accent);
-    color: var(--color-bg-primary);
+    color: #0a0e17;
 }
 
 .btn-primary:hover {
@@ -164,7 +170,7 @@ button {
 
 .btn-outline:hover {
     background: var(--color-accent);
-    color: var(--color-bg-primary);
+    color: #0a0e17;
     box-shadow: var(--shadow-glow);
 }
 
@@ -181,7 +187,7 @@ button {
 
 .btn-glow {
     background: linear-gradient(135deg, var(--color-accent) 0%, #0891b2 100%);
-    color: var(--color-bg-primary);
+    color: #0a0e17;
     box-shadow: var(--shadow-glow);
 }
 
@@ -1582,7 +1588,7 @@ button {
     color: #e5e7eb;
     border-top: 1px solid #1f2933;
     padding: 12px 16px;
-    font-size: 14px;
+    font-size: 0.9375rem;
 }
 
 .cookie-banner-inner {
@@ -1598,6 +1604,7 @@ button {
 .cookie-text {
     margin: 0;
     flex: 1 1 260px;
+    color: #d1d5db;
 }
 
 .cookie-actions {
@@ -1610,15 +1617,16 @@ button {
     border-radius: 6px;
     border: none;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: 500;
 }
 
 .cookie-btn-accept {
     background: #10b981;
-    color: white;
+    color: #ffffff;
 }
 
 .cookie-btn-reject {
-    background: #374151;
-    color: #e5e7eb;
+    background: #4b5563;
+    color: #f3f4f6;
 }
