@@ -407,8 +407,8 @@ const packageFeatures = {
             
             // Add logo with correct aspect ratio (391:64 = ~6:1)
             // Height: 12mm, Width: 73mm (maintains aspect ratio)
-            // Positioned at 15mm from left, 14mm from top (centered in 40mm header)
-            doc.addImage(logoImg, 'PNG', 15, 14, 73, 12);
+            // Aligned with "QUOTE" (Y: 20 - 12/2 = 14) and "Prepared for:" (X: 20)
+            doc.addImage(logoImg, 'PNG', 20, 14, 73, 12);
             
         } catch (error) {
             console.error('Failed to load logo, using text only:', error);
