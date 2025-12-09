@@ -193,6 +193,26 @@
         --section-padding: 80px 0;
     }
     
+    /* PERFORMANCE: Disable heavy animations on mobile */
+    .floating-element,
+    .gradient-orb,
+    .particle,
+    .fiverr-glow,
+    .hero-shape-1,
+    .hero-shape-2 {
+        animation: none !important;
+        opacity: 0.3 !important;
+        will-change: auto !important;
+    }
+    
+    /* PERFORMANCE: Reduce expensive blur filters on mobile */
+    .fiverr-glow,
+    .hero-shape-1,
+    .hero-shape-2,
+    .gradient-orb {
+        filter: blur(40px) !important;
+    }
+    
     .section-title {
         font-size: 2rem;
     }
@@ -246,6 +266,31 @@
     
     .floating-element {
         display: none;
+    }
+    
+    /* PERFORMANCE: Remove all heavy animations on mobile */
+    * {
+        animation-duration: 0s !important;
+        animation-delay: 0s !important;
+    }
+    
+    /* Allow only essential transitions */
+    .btn,
+    .nav-toggle,
+    .extra-content,
+    .package-option-content,
+    .faq-question {
+        animation: none !important;
+        transition: transform 0.2s ease, background-color 0.2s ease !important;
+    }
+    
+    /* PERFORMANCE: Content visibility for off-screen sections */
+    .process,
+    .about,
+    .faq,
+    .contact {
+        content-visibility: auto;
+        contain-intrinsic-size: auto 500px;
     }
     
     /* Fiverr Mega CTA */
