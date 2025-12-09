@@ -405,21 +405,17 @@ const packageFeatures = {
             doc.setFillColor(26, 26, 26);
             doc.rect(0, 0, pageWidth, 40, 'F');
             
-            // Add logo (15x15mm at 20mm from left, centered vertically in header)
-            doc.addImage(logoImg, 'PNG', 20, 12.5, 15, 15);
+            // Add larger logo (40x20mm - full logo with text)
+            // Positioned at 15mm from left, 10mm from top
+            doc.addImage(logoImg, 'PNG', 15, 10, 60, 20);
             
-            // Adjust text to be next to logo
-            doc.setTextColor(0, 174, 239);
-            doc.setFontSize(28);
-            doc.setFont(undefined, 'bold');
-            doc.text('Liam Designs', 38, 20);
         } catch (error) {
             console.error('Failed to load logo, using text only:', error);
             // Fallback to text-only header if logo fails
             doc.setFillColor(26, 26, 26);
             doc.rect(0, 0, pageWidth, 40, 'F');
             
-            doc.setTextColor(0, 174, 239);
+            doc.setTextColor(40, 191, 255);
             doc.setFontSize(28);
             doc.setFont(undefined, 'bold');
             doc.text('Liam Designs', 20, 20);
