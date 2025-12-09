@@ -405,9 +405,10 @@ const packageFeatures = {
             doc.setFillColor(26, 26, 26);
             doc.rect(0, 0, pageWidth, 40, 'F');
             
-            // Add larger logo (40x20mm - full logo with text)
-            // Positioned at 15mm from left, 10mm from top
-            doc.addImage(logoImg, 'PNG', 15, 10, 60, 20);
+            // Add logo with correct aspect ratio (391:64 = ~6:1)
+            // Height: 12mm, Width: 73mm (maintains aspect ratio)
+            // Positioned at 15mm from left, 14mm from top (centered in 40mm header)
+            doc.addImage(logoImg, 'PNG', 15, 14, 73, 12);
             
         } catch (error) {
             console.error('Failed to load logo, using text only:', error);
