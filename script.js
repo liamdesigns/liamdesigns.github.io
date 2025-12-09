@@ -366,6 +366,24 @@ const packageFeatures = {
     // PDF GENERATION
     // ===================================
     
+    // Helper function to load image as base64
+    function loadImage(src) {
+        return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.crossOrigin = 'Anonymous';
+            img.onload = () => {
+                const canvas = document.createElement('canvas');
+                canvas.width = img.width;
+                canvas.height = img.height;
+                const ctx = canvas.getContext('2d');
+                ctx.drawImage(img, 0, 0);
+                resolve(canvas.toDataURL('image/png'));
+            };
+            img.onerror = reject;
+            img.src = src;
+        });
+    }
+    
     async function generateQuotePDF(data) {
         const { jsPDF } = window.jspdf;
         const doc = new jsPDF();
@@ -380,14 +398,32 @@ const packageFeatures = {
             year: 'numeric' 
         });
         
-        // Header
-        doc.setFillColor(26, 26, 26);
-        doc.rect(0, 0, pageWidth, 40, 'F');
-        
-        doc.setTextColor(0, 174, 239);
-        doc.setFontSize(28);
-        doc.setFont(undefined, 'bold');
-        doc.text('Liam Designs', 20, 20);
+        // Load and add logo
+        try {
+            const logoImg = await loadImage('logo.png');
+            // Header
+            doc.setFillColor(26, 26, 26);
+            doc.rect(0, 0, pageWidth, 40, 'F');
+            
+            // Add logo (15x15mm at 20mm from left, centered vertically in header)
+            doc.addImage(logoImg, 'PNG', 20, 12.5, 15, 15);
+            
+            // Adjust text to be next to logo
+            doc.setTextColor(0, 174, 239);
+            doc.setFontSize(28);
+            doc.setFont(undefined, 'bold');
+            doc.text('Liam Designs', 38, 20);
+        } catch (error) {
+            console.error('Failed to load logo, using text only:', error);
+            // Fallback to text-only header if logo fails
+            doc.setFillColor(26, 26, 26);
+            doc.rect(0, 0, pageWidth, 40, 'F');
+            
+            doc.setTextColor(0, 174, 239);
+            doc.setFontSize(28);
+            doc.setFont(undefined, 'bold');
+            doc.text('Liam Designs', 20, 20);
+        }
         
         doc.setTextColor(255, 255, 255);
         doc.setFontSize(32);
