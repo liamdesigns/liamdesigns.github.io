@@ -222,11 +222,14 @@
     }
     
     .hero-title {
-        font-size: 2.25rem;
+        font-size: 2.75rem;
+        text-align: center;
+        line-height: 1.2;
     }
     
     .hero-subtitle {
-        font-size: 1.125rem;
+        font-size: 1.25rem;
+        text-align: center;
     }
     
     /* Hero Section */
@@ -234,9 +237,15 @@
         padding: 140px 0 80px;
     }
     
+    .hero-content {
+        text-align: center;
+    }
+    
     .hero-buttons {
         flex-direction: column;
         gap: 12px;
+        align-items: center;
+        justify-content: center;
     }
     
     .hero-buttons .btn {
