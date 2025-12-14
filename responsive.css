@@ -238,6 +238,7 @@
     /* Hero Section */
     .hero {
         padding: 140px 0 80px;
+        background: linear-gradient(135deg, #0a0e1a 0%, #0f1419 40%, #1a3a52 100%) !important;
     }
     
     .hero-content {
