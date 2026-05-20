@@ -364,9 +364,34 @@ textarea.form-input{resize:vertical;min-height:130px}
 .fiverr-badge span{font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold)}
 .fiverr-h2{font-family:var(--font-display);font-size:clamp(1.75rem,3.5vw,2.5rem);margin-bottom:0.75rem}
 .fiverr-sub{font-size:1rem;color:var(--text-2);max-width:48ch;margin:0 auto 2rem}
-.fiverr-feats{display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap;margin-bottom:2.5rem}
-.fiverr-feat{display:flex;align-items:center;gap:0.5rem;font-size:0.875rem;color:var(--text-2)}
-.fiverr-feat svg{color:var(--accent-2)}
+.fiverr-feats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:0.75rem;
+  max-width:760px;
+  margin:0 auto 2.5rem;
+}
+
+.fiverr-feat{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:0.45rem;
+  font-size:0.84rem;
+  color:var(--text-2);
+  background:rgba(255,255,255,0.035);
+  border:1px solid var(--border);
+  border-radius:999px;
+  padding:0.55rem 0.75rem;
+  white-space:nowrap;
+}
+
+.fiverr-feat svg{
+  color:var(--accent-2);
+  width:14px;
+  height:14px;
+  flex-shrink:0;
+}
 
 /* ═══════════════════════════════════════
    FOOTER
@@ -418,8 +443,16 @@ textarea.form-input{resize:vertical;min-height:130px}
   .fiverr-banner{padding:1.5rem;border-radius:14px}
   .fiverr-h2{font-size:1.4rem;margin-bottom:0.5rem}
   .fiverr-sub{font-size:0.875rem;margin-bottom:1.25rem}
-  .fiverr-feats{display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;margin-bottom:1.5rem;justify-items:start}
-  .fiverr-feat{font-size:0.8rem}
+  .fiverr-feats{
+  grid-template-columns:1fr;
+  gap:0.55rem;
+  margin-bottom:1.5rem;
+}
+
+.fiverr-feat{
+  font-size:0.8rem;
+  justify-content:flex-start;
+}
   .fiverr-badge{margin-bottom:0.75rem}
   .footer-top{grid-template-columns:1fr;gap:2rem}
   .footer-nav{gap:2rem;flex-wrap:wrap}
@@ -427,30 +460,44 @@ textarea.form-input{resize:vertical;min-height:130px}
 @media(max-width:580px){
   .process-grid::before{display:none}
   /* Hero mobile tightening */
-  .hero-orb-2{display:none}
+  .hero{
+    min-height:auto;
+    padding-top:calc(var(--nav-h) + 1.5rem);
+    padding-bottom:2.5rem;
+  }
   .hero-label{display:none}
   .hero-h1{font-size:clamp(2.2rem,9vw,3rem);margin-bottom:1rem}
   .hero-desc{font-size:1rem;margin-bottom:1.5rem}
   .hero-actions{gap:0.6rem}
   .btn-lg{padding:0.7rem 1.4rem;font-size:0.9rem}
   .hero-trust{
-    flex-direction:row;
-    flex-wrap:wrap;
-    gap:0.4rem;
-    margin-top:1.1rem;
-    padding-top:1rem;
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:0.35rem;
+    margin-top:1rem;
+    padding-top:0.9rem;
     border-top:1px solid var(--border);
+    overflow:visible;
   }
   .hero-trust-item{
     background:var(--ink-2);
     border:1px solid var(--border);
     border-radius:999px;
-    padding:0.28rem 0.65rem;
-    font-size:0.7rem;
-    gap:0.28rem;
+    padding:0.32rem 0.28rem;
+    font-size:clamp(0.52rem, 2.35vw, 0.64rem);
+    gap:0.18rem;
     color:var(--text-2);
+    white-space:nowrap;
+    justify-content:center;
+    min-width:0;
   }
-  .hero-trust-item strong{font-size:0.7rem;color:var(--text-2)}
+  .hero-trust-item strong{
+    font-size:inherit;
+    color:var(--text-2);
+    overflow:visible;
+    text-overflow:clip;
+    white-space:nowrap;
+  }
   .hero-trust-item svg{width:10px;height:10px;color:var(--accent)}
   .process-grid{grid-template-columns:1fr 1fr;gap:1.25rem}
   .about-stats{grid-template-columns:1fr 1fr;gap:0.75rem}
@@ -616,7 +663,7 @@ textarea.form-input{resize:vertical;min-height:130px}
       <div class="hero-trust">
         <div class="hero-trust-item">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-          <strong>Built for conversions</strong>
+          <strong>Converts visitors</strong>
         </div>
         <div class="hero-trust-item">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
@@ -815,7 +862,6 @@ textarea.form-input{resize:vertical;min-height:130px}
         <a href="#quote" class="btn btn-gold pkg-cta" style="text-align:center;justify-content:center;">Get started</a>
       </div>
     </div>
-  <div class="scroll-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>Swipe to compare</div>
   <div class="scroll-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>Swipe to compare packages</div>
   </div>
 </section>
