@@ -1,1031 +1,1336 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Primary Meta Tags -->
-    <title>Liam Designs - Professional Landing Pages Built For Results | UK Web Designer</title>
-    <meta name="description" content="Professional landing pages built for results. Modern, fast, and conversion-focused web design services in the UK.">
-    <meta name="author" content="Liam Designs">
-    <link rel="canonical" href="https://liamdesigns.dev/">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://liamdesigns.dev/">
-    <meta property="og:title" content="Liam Designs - Professional Landing Pages Built For Results">
-    <meta property="og:description" content="Professional landing pages built for results. Modern, fast, and conversion-focused web design services in the UK.">
-    <meta property="og:image" content="https://liamdesigns.dev/og-image.jpg">
-    <meta property="og:locale" content="en_GB">
-    
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://liamdesigns.dev/">
-    <meta name="twitter:title" content="Liam Designs - Professional Landing Pages Built For Results">
-    <meta name="twitter:description" content="Professional landing pages built for results. Modern, fast, and conversion-focused web design services in the UK.">
-    <meta name="twitter:image" content="https://liamdesigns.dev/og-image.jpg">
-    
-    <!-- Performance & Mobile -->
-    <meta name="theme-color" content="#28bfff">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    
-    <!-- Preconnect for Performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    
-    <!-- Fonts - Optimized Loading -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles.css?v=20251207">
-    <link rel="stylesheet" href="responsive.css?v=20251207">
-    
-    <!-- jsPDF for quote PDF generation -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
-    
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Liam Designs",
-      "url": "https://liamdesigns.dev",
-      "description": "Professional landing pages built for results. Modern, fast, and conversion-focused web design services.",
-      "email": "hello@liamdesigns.dev",
-      "priceRange": "£90-£240",
-      "areaServed": {
-        "@type": "Country",
-        "name": "United Kingdom"
-      }
-    }
-    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liam Designs, Custom Web Design. Hand Coded. Built to Last.</title>
+<meta name="description" content="Professional, hand-coded websites for businesses and creators. No templates, no builders, just clean custom code built for results.">
+<meta name="author" content="Liam Designs">
+<link rel="canonical" href="https://liamdesigns.dev/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://liamdesigns.dev/">
+<meta property="og:title" content="Liam Designs, Custom Web Design. Hand Coded. Built to Last.">
+<meta property="og:description" content="Professional, hand-coded websites for businesses and creators. No templates, no builders, just clean custom code built for results.">
+<meta property="og:image" content="https://liamdesigns.dev/og-image.jpg">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b0b0f">
+<link rel="icon" type="image/x-icon" href="favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Liam Designs",
+  "url": "https://liamdesigns.dev",
+  "description": "Custom hand-coded websites for businesses and creators.",
+  "email": "hello@liamdesigns.dev",
+  "priceRange": "£99-£799",
+  "areaServed": {"@type": "Country", "name": "United Kingdom"}
+}
+</script>
+<style>
+/* ═══════════════════════════════════════
+   TOKENS & RESET
+═══════════════════════════════════════ */
+:root {
+  --ink:       #0b0b0f;
+  --ink-2:     #111118;
+  --ink-3:     #18181f;
+  --border:    rgba(255,255,255,0.07);
+  --border-2:  rgba(255,255,255,0.12);
+  --text:      #e8e6f0;
+  --text-2:    #9896a8;
+  --text-3:    #5e5c6e;
+  --accent:    #7b6cff;
+  --accent-2:  #a99fff;
+  --accent-glow: rgba(123,108,255,0.18);
+  --gold:      #c9a96e;
+  --gold-soft: rgba(201,169,110,0.12);
+  --radius:    12px;
+  --transition: 0.22s cubic-bezier(0.4,0,0.2,1);
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --container: 1180px;
+  --nav-h: 72px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:var(--nav-h)}
+body{font-family:var(--font-body);background:var(--ink);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+ul{list-style:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+input,textarea,select{font-family:inherit}
+
+/* ═══════════════════════════════════════
+   UTILITY
+═══════════════════════════════════════ */
+.container{width:min(var(--container),100%);margin-inline:auto;padding-inline:clamp(1.25rem,5vw,2.5rem)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+
+/* ═══════════════════════════════════════
+   TYPOGRAPHY
+═══════════════════════════════════════ */
+.display{font-family:var(--font-display);font-weight:400;line-height:1.08;letter-spacing:-0.01em}
+.eyebrow{font-size:0.7rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent-2)}
+.section-title{font-family:var(--font-display);font-size:clamp(2rem,4.5vw,3rem);font-weight:400;line-height:1.12;margin-bottom:0.6rem}
+.section-sub{font-size:1.0625rem;color:var(--text-2);max-width:52ch;margin-bottom:3.5rem}
+
+/* ═══════════════════════════════════════
+   BUTTONS
+═══════════════════════════════════════ */
+.btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.7rem 1.5rem;border-radius:var(--radius);font-size:0.9rem;font-weight:500;transition:var(--transition);white-space:nowrap}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:#6a5ce8;transform:translateY(-1px);box-shadow:0 8px 28px rgba(123,108,255,0.35)}
+.btn-outline{border:1px solid var(--border-2);color:var(--text-2)}
+.btn-outline:hover{border-color:var(--accent);color:var(--text);background:var(--accent-glow)}
+.btn-gold{background:var(--gold);color:#1a1200;font-weight:600}
+.btn-gold:hover{background:#dbb97e;transform:translateY(-1px);box-shadow:0 8px 28px rgba(201,169,110,0.35)}
+.btn-lg{padding:0.85rem 2rem;font-size:1rem}
+
+/* ═══════════════════════════════════════
+   NAV
+═══════════════════════════════════════ */
+.nav-wrap{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav-h);transition:background var(--transition),border-color var(--transition)}
+.nav-wrap.scrolled{background:rgba(11,11,15,0.92);backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
+.nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:2rem}
+.nav-logo img{height:36px;width:auto}
+.nav-links{display:flex;align-items:center;gap:0.25rem}
+.nav-links a{font-size:0.875rem;color:var(--text-2);padding:0.4rem 0.75rem;border-radius:8px;transition:var(--transition)}
+.nav-links a:hover{color:var(--text);background:var(--border)}
+.nav-links .nav-cta{background:var(--accent);color:#fff;padding:0.4rem 1rem;margin-left:0.5rem}
+.nav-links .nav-cta:hover{background:#6a5ce8;color:#fff}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;padding:6px;border-radius:8px;border:1px solid var(--border-2)}
+.nav-hamburger span{display:block;width:20px;height:1.5px;background:var(--text-2);transition:var(--transition)}
+.nav-mobile{display:none;position:fixed;inset:var(--nav-h) 0 0 0;background:rgba(11,11,15,0.97);backdrop-filter:blur(24px);flex-direction:column;align-items:center;justify-content:center;gap:0.5rem;z-index:99}
+.nav-mobile.open{display:flex}
+.nav-mobile a{font-size:1.25rem;color:var(--text-2);padding:0.75rem 2rem;border-radius:10px;transition:var(--transition)}
+.nav-mobile a:hover,.nav-mobile a.cta{color:var(--text)}
+.nav-mobile a.cta{background:var(--accent);color:#fff;margin-top:1rem}
+
+/* ═══════════════════════════════════════
+   HERO
+═══════════════════════════════════════ */
+.hero{min-height:100svh;display:grid;place-items:center;position:relative;overflow:hidden;padding-top:var(--nav-h)}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:0.55}
+.hero-orb-1{width:600px;height:600px;background:radial-gradient(circle,rgba(123,108,255,0.5),transparent 70%);top:-200px;right:-100px}
+.hero-orb-2{width:500px;height:500px;background:radial-gradient(circle,rgba(201,169,110,0.2),transparent 70%);bottom:-100px;left:-150px}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px);background-size:72px 72px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 0%,transparent 100%)}
+.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:5rem}
+.hero-label{display:inline-flex;align-items:center;gap:0.5rem;padding:0.35rem 0.85rem;background:var(--gold-soft);border:1px solid rgba(201,169,110,0.25);border-radius:999px;margin-bottom:1.75rem}
+.hero-label span{font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold)}
+.hero-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);animation:pulse-dot 2s ease-in-out infinite}
+@keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(0.8)}}
+.hero-h1{font-family:var(--font-display);font-size:clamp(2.8rem,5.5vw,4.25rem);line-height:1.06;letter-spacing:-0.02em;margin-bottom:1.5rem}
+.hero-h1 em{font-style:italic;color:var(--accent-2)}
+.hero-desc{font-size:1.125rem;color:var(--text-2);line-height:1.7;max-width:44ch;margin-bottom:2.5rem}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
+.hero-trust{display:flex;gap:2rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}
+.hero-trust-item{font-size:0.8125rem;color:var(--text-3);display:flex;align-items:center;gap:0.4rem}
+.hero-trust-item strong{color:var(--text-2);font-weight:500}
+.hero-visual{position:relative;display:flex;align-items:center;justify-content:center}
+.hero-screen{background:var(--ink-2);border:1px solid var(--border-2);border-radius:14px;overflow:hidden;width:100%;box-shadow:0 40px 80px rgba(0,0,0,0.5),0 0 0 1px rgba(255,255,255,0.04)}
+.screen-bar{background:var(--ink-3);border-bottom:1px solid var(--border);padding:10px 14px;display:flex;align-items:center;gap:8px}
+.screen-dot{width:9px;height:9px;border-radius:50%}
+.screen-dot:nth-child(1){background:#ff5f56}
+.screen-dot:nth-child(2){background:#ffbd2e}
+.screen-dot:nth-child(3){background:#27c93f}
+.screen-url{flex:1;margin-left:8px;background:var(--ink);border-radius:6px;height:22px;display:flex;align-items:center;padding:0 10px}
+.screen-url span{font-size:0.65rem;color:var(--text-3)}
+.screen-body{padding:24px;display:flex;flex-direction:column;gap:14px}
+.sb-hero{height:80px;background:linear-gradient(135deg,var(--accent-glow),var(--gold-soft));border-radius:8px;display:flex;align-items:center;justify-content:center;gap:10px}
+.sb-pulse{width:8px;height:8px;border-radius:50%;background:var(--accent-2);animation:pulse-dot 1.5s ease-in-out infinite}
+.sb-text{font-size:0.7rem;color:var(--accent-2);letter-spacing:0.08em;text-transform:uppercase;font-weight:600}
+.sb-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+.sb-card{height:52px;background:var(--ink-3);border:1px solid var(--border);border-radius:8px;position:relative;overflow:hidden}
+.sb-card::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent,var(--accent-glow));opacity:0;transition:opacity 0.3s}
+.sb-card:hover::after{opacity:1}
+.sb-lines{display:flex;flex-direction:column;gap:6px}
+.sb-line{height:7px;background:var(--ink-3);border-radius:4px}
+.sb-line:nth-child(1){width:80%}
+.sb-line:nth-child(2){width:60%}
+.sb-line:nth-child(3){width:75%}
+.sb-bar{height:36px;background:var(--ink-3);border-radius:8px;display:flex;align-items:center;padding:0 12px;gap:8px}
+.sb-bar-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);opacity:0.7}
+.sb-bar-line{flex:1;height:5px;background:var(--ink-2);border-radius:3px;overflow:hidden}
+.sb-bar-fill{height:100%;width:68%;background:linear-gradient(90deg,var(--accent),var(--accent-2));border-radius:3px;animation:bar-grow 2s ease-out infinite alternate}
+@keyframes bar-grow{from{width:50%}to{width:82%}}
+.hero-float-tag{position:absolute;bottom:-16px;right:-20px;background:var(--ink-2);border:1px solid var(--border-2);border-radius:10px;padding:10px 16px;display:flex;align-items:center;gap:8px;box-shadow:0 8px 32px rgba(0,0,0,0.4)}
+.hft-icon{width:30px;height:30px;border-radius:8px;background:var(--accent-glow);display:flex;align-items:center;justify-content:center;color:var(--accent-2)}
+.hft-text{font-size:0.75rem;color:var(--text-2);line-height:1.3}
+.hft-text strong{color:var(--text);display:block;font-size:0.8rem}
+
+/* ═══════════════════════════════════════
+   MARQUEE STRIP
+═══════════════════════════════════════ */
+.marquee-strip{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:1rem 0;overflow:hidden;mask-image:linear-gradient(90deg,transparent,black 10%,black 90%,transparent)}
+.marquee-track{display:flex;gap:0;animation:marquee-scroll 30s linear infinite}
+.marquee-track:hover{animation-play-state:paused}
+.marquee-item{display:flex;align-items:center;gap:0.75rem;white-space:nowrap;padding:0 2.5rem;font-size:0.8125rem;color:var(--text-3);font-weight:500;letter-spacing:0.04em}
+.marquee-item svg{color:var(--accent);flex-shrink:0;opacity:0.7}
+@keyframes marquee-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ═══════════════════════════════════════
+   SECTION COMMONS
+═══════════════════════════════════════ */
+section{padding:clamp(4rem,8vw,7rem) 0}
+.section-header{margin-bottom:3.5rem}
+
+/* ═══════════════════════════════════════
+   PORTFOLIO
+═══════════════════════════════════════ */
+.portfolio-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.5rem}
+.port-card{background:var(--ink-2);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:border-color var(--transition),transform var(--transition);group}
+.port-card:hover{border-color:var(--border-2);transform:translateY(-4px)}
+.port-img-wrap{position:relative;overflow:hidden;aspect-ratio:16/10}
+.port-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s cubic-bezier(0.4,0,0.2,1)}
+.port-card:hover .port-img-wrap img{transform:scale(1.04)}
+.port-overlay{position:absolute;inset:0;background:rgba(11,11,15,0.7);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity var(--transition);backdrop-filter:blur(4px)}
+.port-card:hover .port-overlay{opacity:1}
+.port-overlay a{background:var(--accent);color:#fff;padding:0.6rem 1.4rem;border-radius:10px;font-size:0.875rem;font-weight:500;transition:background var(--transition)}
+.port-overlay a:hover{background:#6a5ce8}
+.port-info{padding:1.25rem 1.5rem 1.5rem}
+.port-tag{font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent-2);font-weight:600;margin-bottom:0.4rem}
+.port-title{font-size:1.125rem;font-weight:600;margin-bottom:0.4rem}
+.port-desc{font-size:0.875rem;color:var(--text-2);line-height:1.6}
+
+/* ═══════════════════════════════════════
+   SERVICES / PACKAGES
+═══════════════════════════════════════ */
+.packages-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;align-items:stretch}
+.pkg{background:var(--ink-2);border:1px solid var(--border);border-radius:16px;padding:2rem;position:relative;transition:border-color var(--transition);display:flex;flex-direction:column;height:100%}
+.pkg{transition:border-color 0.3s ease,transform 0.3s ease,box-shadow 0.3s ease}
+.pkg:hover{border-color:var(--accent);transform:translateY(-5px);box-shadow:0 12px 40px rgba(123,108,255,0.18)}
+.pkg.featured{border-color:var(--accent);background:linear-gradient(135deg,var(--ink-2),rgba(123,108,255,0.06));box-shadow:0 0 40px rgba(123,108,255,0.12)}
+.pkg-featured-badge{position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:linear-gradient(90deg,var(--accent),#9b8fff);color:#fff;font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.28rem 1.1rem;border-radius:0 0 9px 9px;box-shadow:0 2px 12px rgba(123,108,255,0.4)}
+.pkg-name{font-size:0.72rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent-2);margin-bottom:0.5rem}
+.pkg-price-wrap{display:flex;align-items:baseline;gap:0.25rem;margin-bottom:0.35rem}
+.pkg-price{font-family:var(--font-display);font-size:2.75rem;color:var(--text)}
+.pkg-price-cur{font-size:1.25rem;color:var(--text-2);align-self:flex-start;margin-top:0.5rem}
+.pkg-tagline{font-size:0.875rem;color:var(--text-2);margin-bottom:1.5rem;line-height:1.5;min-height:58px}
+.pkg-divider{height:1px;background:var(--border);margin-bottom:1.5rem}
+.pkg-features{display:flex;flex-direction:column;gap:0.6rem;margin-bottom:2rem;flex:1}
+.pkg-feature{display:flex;align-items:flex-start;gap:0.6rem;font-size:0.875rem;color:var(--text-2)}
+.pkg-feature svg{flex-shrink:0;color:var(--accent);margin-top:2px}
+.pkg-cta{width:100%;margin-top:auto}
+
+/* ═══════════════════════════════════════
+   PROCESS
+═══════════════════════════════════════ */
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;position:relative}
+.process-grid::before{content:'';position:absolute;top:28px;left:calc(12.5% + 20px);right:calc(12.5% + 20px);height:1px;background:linear-gradient(90deg,transparent,var(--border-2),var(--border-2),transparent)}
+.proc-step{text-align:center;position:relative}
+.proc-num{width:56px;height:56px;border-radius:50%;background:var(--ink-2);border:1px solid var(--border-2);display:flex;align-items:center;justify-content:center;color:var(--accent-2);margin:0 auto 0.75rem;position:relative;z-index:1}
+.proc-step.active .proc-num{background:var(--accent-glow);border-color:var(--accent);color:var(--accent-2)}
+.proc-title{font-weight:600;margin-bottom:0.4rem;font-size:0.9375rem}
+.proc-desc{font-size:0.8125rem;color:var(--text-2);line-height:1.6}
+.proc-badge{font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent-2);margin-bottom:0.5rem}
+
+/* ═══════════════════════════════════════
+   ABOUT
+═══════════════════════════════════════ */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.about-text p{color:var(--text-2);line-height:1.8;margin-bottom:1.25rem;font-size:0.9375rem}
+.about-text p:last-child{margin-bottom:0}
+.skills-wrap{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:2rem}
+.skill-pill{padding:0.35rem 0.85rem;background:var(--ink-3);border:1px solid var(--border);border-radius:999px;font-size:0.78rem;color:var(--text-2);transition:border-color var(--transition),color var(--transition)}
+.skill-pill:hover{border-color:var(--accent);color:var(--accent-2)}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.stat-card{background:var(--ink-2);border:1px solid var(--border);border-radius:14px;padding:1.75rem;transition:border-color var(--transition)}
+.stat-card:hover{border-color:var(--border-2)}
+.stat-num{font-family:var(--font-display);font-size:2.5rem;color:var(--accent-2);line-height:1;margin-bottom:0.4rem}
+.stat-label{font-size:0.8125rem;color:var(--text-2)}
+
+/* ═══════════════════════════════════════
+   QUOTE BUILDER
+═══════════════════════════════════════ */
+.quote-section{background:var(--ink-2)}
+.quote-wrap{display:grid;grid-template-columns:1fr 380px;gap:3rem;align-items:stretch}
+.quote-form-panel{display:flex;flex-direction:column;gap:2rem}
+.q-step{background:var(--ink-3);border:1px solid var(--border);border-radius:14px;padding:1.5rem}
+.q-step-head{display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem}
+.q-step-num{width:32px;height:32px;border-radius:50%;background:var(--accent-glow);border:1px solid var(--accent);display:flex;align-items:center;justify-content:center;font-size:0.78rem;font-weight:700;color:var(--accent-2);flex-shrink:0}
+.q-step-head h3{font-size:1rem;font-weight:600}
+.q-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem}
+.q-label{font-size:0.72rem;font-weight:600;letter-spacing:0.06em;color:var(--text-3);margin-bottom:4px;display:block}
+.q-input{width:100%;background:var(--ink-2);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:0.875rem;padding:0.55rem 0.75rem;outline:none;transition:border-color var(--transition)}
+.q-input:focus{border-color:var(--accent)}
+.q-input::placeholder{color:var(--text-3)}
+.q-packages{display:flex;flex-direction:column;gap:0.6rem}
+.q-pkg{background:var(--ink-2);border:1px solid var(--border);border-radius:10px;padding:0.9rem 1rem;cursor:pointer;transition:border-color var(--transition),background var(--transition);position:relative;display:flex;align-items:center;gap:0.85rem}
+.q-pkg:hover{border-color:var(--border-2)}
+.q-pkg.selected{border-color:var(--accent);background:rgba(123,108,255,0.06)}
+.q-radio{width:16px;height:16px;border-radius:50%;border:1.5px solid var(--border-2);flex-shrink:0;transition:all var(--transition)}
+.q-pkg.selected .q-radio{background:var(--accent);border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-glow)}
+.q-pkg-info{flex:1}
+.q-pkg-name{font-size:0.875rem;font-weight:600;margin-bottom:2px}
+.q-pkg-desc{font-size:0.775rem;color:var(--text-2)}
+.q-pkg-price{font-family:var(--font-display);font-size:1.25rem;color:var(--accent-2);white-space:nowrap}
+.q-extras{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem}
+.q-extra{background:var(--ink-2);border:1px solid var(--border);border-radius:10px;padding:0.75rem 0.9rem;cursor:pointer;transition:border-color var(--transition),background var(--transition);display:flex;align-items:center;gap:0.6rem}
+.q-extra:hover{border-color:var(--border-2)}
+.q-extra.selected{border-color:var(--accent);background:rgba(123,108,255,0.06)}
+.q-checkbox{width:14px;height:14px;border-radius:4px;border:1.5px solid var(--border-2);flex-shrink:0;transition:all var(--transition)}
+.q-extra.selected .q-checkbox{background:var(--accent);border-color:var(--accent)}
+.q-extra-name{font-size:0.78rem;font-weight:500;flex:1}
+.q-extra-price{font-size:0.78rem;color:var(--accent-2);font-weight:600;white-space:nowrap}
+.q-extra.free .q-extra-price{color:var(--gold)}
+.q-extra.included{cursor:default;opacity:0.55;pointer-events:none}
+.q-extra.included .q-checkbox{background:var(--border-2);border-color:var(--border-2)}
+.q-extra-included-label{font-size:0.68rem;color:var(--text-3);font-weight:500;white-space:nowrap;font-style:italic}
+.quote-sidebar{position:sticky;top:calc(var(--nav-h) + 1.5rem)}
+.quote-summary-card{background:var(--ink-3);border:1px solid var(--border-2);border-radius:16px;overflow:hidden}
+.qsc-head{background:linear-gradient(135deg,rgba(123,108,255,0.15),rgba(123,108,255,0.05));border-bottom:1px solid var(--border);padding:1.25rem 1.5rem}
+.qsc-head h4{font-size:0.875rem;font-weight:600;margin-bottom:0.2rem}
+.qsc-head p{font-size:0.78rem;color:var(--text-2)}
+.qsc-body{padding:1.25rem 1.5rem}
+.qsc-breakdown{display:flex;flex-direction:column;gap:0.5rem;min-height:60px;margin-bottom:1rem}
+.qsc-row{display:flex;align-items:center;justify-content:space-between;font-size:0.825rem}
+.qsc-row span:first-child{color:var(--text-2)}
+.qsc-row span:last-child{color:var(--text);font-weight:500}
+.qsc-empty{font-size:0.8125rem;color:var(--text-3);font-style:italic;padding:0.5rem 0}
+.qsc-divider{height:1px;background:var(--border);margin:1rem 0}
+.qsc-total-row{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:1.25rem}
+.qsc-total-label{font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-3)}
+.qsc-total-price{font-family:var(--font-display);font-size:2rem;color:var(--accent-2)}
+.qsc-cta{width:100%}
+.qsc-note{font-size:0.75rem;color:var(--text-3);text-align:center;margin-top:0.75rem}
+.extra-pages-row{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 0.9rem;background:var(--ink-2);border:1px solid var(--border);border-radius:10px;margin-top:0.5rem}
+.extra-pages-label{font-size:0.78rem;font-weight:500;color:var(--text-2)}
+.extra-pages-label span{display:block;font-size:0.7rem;color:var(--text-3)}
+.extra-pages-ctrl{display:flex;align-items:center;gap:0.5rem}
+.ep-btn{width:28px;height:28px;border-radius:6px;border:1px solid var(--border-2);color:var(--text);font-size:1rem;display:flex;align-items:center;justify-content:center;transition:border-color var(--transition),background var(--transition)}
+.ep-btn:hover{border-color:var(--accent);background:var(--accent-glow)}
+.ep-count{min-width:24px;text-align:center;font-size:0.875rem;font-weight:600;color:var(--text)}
+
+/* ═══════════════════════════════════════
+   FAQ
+═══════════════════════════════════════ */
+.faq-list{max-width:760px;display:flex;flex-direction:column;gap:0.75rem}
+.faq-item{background:var(--ink-2);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:border-color var(--transition)}
+.faq-item.open{border-color:var(--border-2)}
+.faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.1rem 1.25rem;text-align:left;color:var(--text);font-size:0.9375rem;font-weight:500}
+.faq-icon{flex-shrink:0;color:var(--text-3);transition:transform var(--transition)}
+.faq-item.open .faq-icon{transform:rotate(180deg);color:var(--accent-2)}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height 0.35s cubic-bezier(0.4,0,0.2,1)}
+.faq-answer-inner{padding:0 1.25rem 1.25rem;font-size:0.875rem;color:var(--text-2);line-height:1.75}
+
+/* ═══════════════════════════════════════
+   CONTACT
+═══════════════════════════════════════ */
+.contact-wrap{display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;align-items:stretch}
+.contact-info h2{font-family:var(--font-display);font-size:clamp(2rem,4vw,2.75rem);margin-bottom:1rem}
+.contact-info p{color:var(--text-2);line-height:1.75;margin-bottom:2rem}
+.contact-link{display:flex;align-items:center;gap:0.75rem;padding:0.9rem 1rem;background:var(--ink-2);border:1px solid var(--border);border-radius:12px;margin-bottom:0.75rem;transition:border-color var(--transition)}
+.contact-link:hover{border-color:var(--accent)}
+.contact-link-icon{width:36px;height:36px;border-radius:8px;background:var(--accent-glow);display:flex;align-items:center;justify-content:center;color:var(--accent-2);flex-shrink:0}
+.contact-link-text{font-size:0.875rem}
+.contact-link-text small{display:block;color:var(--text-3);font-size:0.75rem;margin-bottom:1px}
+.form-group{margin-bottom:1rem}
+.form-label{font-size:0.72rem;font-weight:600;letter-spacing:0.06em;color:var(--text-3);margin-bottom:5px;display:block}
+.form-input{width:100%;background:var(--ink-2);border:1px solid var(--border);border-radius:10px;color:var(--text);font-size:0.9rem;padding:0.65rem 0.9rem;outline:none;transition:border-color var(--transition)}
+.form-input:focus{border-color:var(--accent)}
+.form-input::placeholder{color:var(--text-3)}
+textarea.form-input{resize:vertical;min-height:130px}
+.form-note{font-size:0.78rem;color:var(--text-3);margin-top:0.75rem}
+
+/* ═══════════════════════════════════════
+   FIVERR BANNER
+═══════════════════════════════════════ */
+.fiverr-banner{background:linear-gradient(135deg,rgba(123,108,255,0.12),rgba(201,169,110,0.06));border:1px solid rgba(123,108,255,0.25);border-radius:20px;padding:3rem;text-align:center;position:relative;overflow:hidden}
+.fiverr-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 50% 0%,rgba(123,108,255,0.15),transparent);pointer-events:none}
+.fiverr-badge{display:inline-flex;align-items:center;gap:0.5rem;padding:0.35rem 1rem;background:var(--gold-soft);border:1px solid rgba(201,169,110,0.3);border-radius:999px;margin-bottom:1.25rem}
+.fiverr-badge span{font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold)}
+.fiverr-h2{font-family:var(--font-display);font-size:clamp(1.75rem,3.5vw,2.5rem);margin-bottom:0.75rem}
+.fiverr-sub{font-size:1rem;color:var(--text-2);max-width:48ch;margin:0 auto 2rem}
+.fiverr-feats{display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.fiverr-feat{display:flex;align-items:center;gap:0.5rem;font-size:0.875rem;color:var(--text-2)}
+.fiverr-feat svg{color:var(--accent-2)}
+
+/* ═══════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════ */
+.footer{border-top:1px solid var(--border);padding:3rem 0 2rem;background:linear-gradient(180deg,transparent,rgba(123,108,255,0.03))}
+.footer-top{display:grid;grid-template-columns:1fr auto;gap:4rem;margin-bottom:2.5rem;padding-bottom:2.5rem;border-bottom:1px solid var(--border)}
+.footer-brand{max-width:320px}
+.footer-logo{height:32px;margin-bottom:1rem;opacity:0.85}
+.footer-tagline{font-size:0.875rem;color:var(--text-2);line-height:1.6;margin-bottom:1rem}
+.footer-contact-links{display:flex;flex-direction:column;gap:0.35rem}
+.footer-contact-link{font-size:0.8125rem;color:var(--text-3);transition:color var(--transition)}
+.footer-contact-link:hover{color:var(--accent-2)}
+.footer-nav{display:flex;gap:3rem}
+.footer-nav-col{display:flex;flex-direction:column;gap:0.5rem}
+.footer-nav-label{font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent-2);margin-bottom:0.35rem}
+.footer-nav-col a{font-size:0.8125rem;color:var(--text-3);transition:color var(--transition)}
+.footer-nav-col a:hover{color:var(--text)}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.footer-copy{font-size:0.8rem;color:var(--text-3)}
+.footer-sitemap{font-size:0.8rem;color:var(--text-3);transition:color var(--transition)}
+.footer-sitemap:hover{color:var(--text)}
+
+
+
+/* ═══════════════════════════════════════
+   SCROLL REVEAL
+═══════════════════════════════════════ */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.6s cubic-bezier(0.4,0,0.2,1),transform 0.6s cubic-bezier(0.4,0,0.2,1)}
+.reveal.visible{opacity:1;transform:none}
+.reveal-delay-1{transition-delay:0.1s}
+.reveal-delay-2{transition-delay:0.2s}
+.reveal-delay-3{transition-delay:0.3s}
+
+/* ═══════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════ */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;gap:3rem}
+  .hero-visual{display:none}
+  .packages-grid{grid-template-columns:1fr}
+  .process-grid{grid-template-columns:1fr 1fr;gap:2rem}
+  .process-grid::before{display:none}
+  .about-grid{grid-template-columns:1fr;gap:3rem}
+  .about-stats{grid-template-columns:1fr 1fr}
+  .quote-wrap{grid-template-columns:1fr}
+  .contact-wrap{grid-template-columns:1fr;gap:3rem}
+  .nav-links{display:none}
+  .nav-hamburger{display:flex}
+  .fiverr-feats{gap:1.25rem}
+  .footer-top{grid-template-columns:1fr;gap:2.5rem}
+  .footer-nav{gap:2rem}
+}
+@media(max-width:580px){
+  .hero-trust{flex-direction:column;gap:0.75rem}
+  .packages-grid{grid-template-columns:1fr}
+  .process-grid{grid-template-columns:1fr}
+  .about-stats{grid-template-columns:1fr}
+  .q-grid-2{grid-template-columns:1fr}
+  .q-extras{grid-template-columns:1fr}
+  .portfolio-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr}
+  .footer-nav{flex-direction:column;gap:1.5rem}
+  .footer-bottom{flex-direction:column;gap:0.5rem;text-align:center}
+}
+</style>
 </head>
 <body>
-    
-    <!-- ===================================
-         HEADER & NAVIGATION
-         =================================== -->
-    <header class="header" id="header" role="banner">
-        <nav class="nav container" role="navigation" aria-label="Main navigation">
-            <div class="nav-logo">
-                <a href="#home" aria-label="Liam Designs - Return to homepage">
-                    <img src="logo.png" alt="Liam Designs Logo" class="logo-img" width="40" height="40" fetchpriority="high">
-                </a>
-            </div>
-            
-            <ul class="nav-menu" id="navMenu">
-                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                <li class="nav-item"><a href="#quote" class="nav-link">Get Quote</a></li>
-                <li class="nav-item"><a href="#process" class="nav-link">Process</a></li>
-                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-                <li class="nav-item"><a href="#fiverr" class="nav-btn">Hire Me</a></li>
-            </ul>
-            
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </nav>
-    </header>
-    
-    <!-- ===================================
-         HERO SECTION
-         =================================== -->
-    <section class="hero" id="home">
-        <div class="hero-bg">
-            <div class="hero-shape hero-shape-1"></div>
-            <div class="hero-shape hero-shape-2"></div>
-        </div>
-        
-        <div class="container hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    <span class="hero-title-line">Professional</span>
-                    <span class="hero-title-line">Landing Pages</span>
-                    <span class="hero-title-line">Built For Results</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Transform your vision into a stunning, high-converting landing page. 
-                    Modern design, blazing-fast performance, and built to grow your business.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#quote" class="btn btn-glow btn-large">Get Your Quote</a>
-                    <a href="#portfolio" class="btn btn-outline-light btn-large">View My Work</a>
-                </div>
-            </div>
-            
-            <div class="hero-illustration">
-                <div class="ui-layer">
-                    <div class="ui-window">
-                        <div class="ui-header">
-                            <div class="ui-dots">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                        </div>
-                        <div class="ui-content">
-                            <div class="ui-text-line short"></div>
-                            <div class="ui-text-line"></div>
-                            <div class="ui-text-line"></div>
-                            <div class="ui-grid">
-                                <div class="ui-card"></div>
-                                <div class="ui-card"></div>
-                                <div class="ui-card"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <svg class="floating-element floating-1" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <svg class="floating-element floating-2" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                    <circle cx="12" cy="12" r="10"/>
-                </svg>
-                <svg class="floating-element floating-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                    <rect x="6" y="6" width="12" height="12"/>
-                </svg>
-                
-                <div class="gradient-orb orb-1"></div>
-                <div class="gradient-orb orb-2"></div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- ===================================
-         FIVERR CTA MEGA SECTION
-         =================================== -->
-    <section class="fiverr-cta-mega" id="fiverr">
-        <div class="fiverr-bg-effects">
-            <div class="fiverr-glow fiverr-glow-1"></div>
-            <div class="fiverr-glow fiverr-glow-2"></div>
-            <div class="fiverr-glow fiverr-glow-3"></div>
-            <div class="fiverr-particles">
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-            </div>
-        </div>
-        
-        <div class="container">
-            <div class="fiverr-mega-content">
-                <div class="fiverr-badge-animated">
-                    <div class="fiverr-badge-shine"></div>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                    </svg>
-                    Available on Fiverr
-                </div>
-                
-                <div class="fiverr-mega-title">
-                    <span class="fiverr-title-accent">Ready to Start Your Project?</span>
-                    <h2 class="fiverr-title-main">Hire Me on Fiverr Today</h2>
-                </div>
-                
-                <p class="fiverr-mega-description">
-                    Quick turnaround, professional results, exceptional support.
-                </p>
-                
-                <div class="fiverr-features-grid">
-                    <div class="fiverr-feature">
-                        <div class="fiverr-feature-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                            </svg>
-                        </div>
-                        <span>Fast Delivery</span>
-                    </div>
-                    <div class="fiverr-feature">
-                        <div class="fiverr-feature-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                            </svg>
-                        </div>
-                        <span>Professional Designs</span>
-                    </div>
-                    <div class="fiverr-feature">
-                        <div class="fiverr-feature-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
-                            </svg>
-                        </div>
-                        <span>5-Star Reviews</span>
-                    </div>
-                    <div class="fiverr-feature">
-                        <div class="fiverr-feature-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                            </svg>
-                        </div>
-                        <span>Quality Assured</span>
-                    </div>
-                </div>
-                
-                <div class="fiverr-cta-buttons">
-                    <a href="https://www.fiverr.com/liamh96/" target="_blank" rel="noopener" class="btn-fiverr-mega">
-                        <div class="btn-fiverr-shine"></div>
-                        <div class="btn-fiverr-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
-                            </svg>
-                        </div>
-                        View My Fiverr Gig
-                    </a>
-                </div>
-                
-                <div class="fiverr-trust-text">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
-                    </svg>
-                    Secure payment via Fiverr's platform
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- ===================================
-         PORTFOLIO SECTION
-         =================================== -->
-    <section class="portfolio" id="portfolio">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Portfolio</h2>
-                <p class="section-subtitle">Recent projects showcasing modern design and performance</p>
-            </div>
-            
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="portfolio/Velion.png" alt="VELION - Clean, Modern Finance Platform" class="portfolio-screenshot" width="600" height="400" loading="lazy">
-                        <div class="portfolio-overlay">
-                            <a href="portfolio/Velion/" class="portfolio-btn">View VELION Demo</a>
-                        </div>
-                    </div>
-                    <div class="portfolio-info">
-                        <h3 class="portfolio-title">VELION</h3>
-                        <p class="portfolio-tagline">Clean, Modern Finance Platform</p>
-                        <p class="portfolio-desc">A bright, beautifully balanced design with smooth gradients and crisp typography. VELION delivers a polished, modern feel built for clarity, speed, and trust.</p>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="portfolio/NovaFrame.png" alt="NovaFrame - Sleek, High Tech Engineering Website" class="portfolio-screenshot" width="600" height="400" loading="lazy">
-                        <div class="portfolio-overlay">
-                            <a href="portfolio/NovaFrame/" class="portfolio-btn">View NovaFrame Demo</a>
-                        </div>
-                    </div>
-                    <div class="portfolio-info">
-                        <h3 class="portfolio-title">NovaFrame</h3>
-                        <p class="portfolio-tagline">Sleek, High Tech Engineering Website</p>
-                        <p class="portfolio-desc">A dark, futuristic interface with glowing accents and precise structure. NovaFrame presents a premium, technology driven aesthetic tailored for serious engineering teams.</p>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="portfolio/BrightWave.png" alt="BrightWave Electrical - Modern, Trust Focused Electrician Website" class="portfolio-screenshot" width="600" height="400" loading="lazy">
-                        <div class="portfolio-overlay">
-                            <a href="portfolio/BrightWave/" class="portfolio-btn">View BrightWave Demo</a>
-                        </div>
-                    </div>
-                    <div class="portfolio-info">
-                        <h3 class="portfolio-title">BrightWave Electrical</h3>
-                        <p class="portfolio-tagline">Modern, Trust Focused Electrician Website</p>
-                        <p class="portfolio-desc">A polished dark theme design built to highlight expertise, reliability, and quick response. Perfect for a skilled sole tradesman looking professional, approachable, and dependable online.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- ===================================
-         QUOTE BUILDER SECTION
-         =================================== -->
-    <section class="quote-builder" id="quote">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Get Your Quote</h2>
-                <p class="section-subtitle">Build your perfect package in seconds</p>
-            </div>
-            
-            <div class="quote-builder-wrapper">
-                <!-- Step 1: Client Information -->
-                <div class="quote-step">
-                    <h3 class="quote-step-title">
-                        <span class="step-number">1</span>
-                        Your Information
-                    </h3>
-                    <div class="client-info-grid">
-                        <div class="form-group">
-                            <label for="clientName" class="form-label">Your Name *</label>
-                            <input type="text" id="clientName" name="clientName" class="form-input" placeholder="John Smith" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="businessName" class="form-label">Business Name *</label>
-                            <input type="text" id="businessName" name="businessName" class="form-input" placeholder="Your Company Ltd" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="clientEmail" class="form-label">Email Address *</label>
-                            <input type="email" id="clientEmail" name="clientEmail" class="form-input" placeholder="you@example.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="currencySelector" class="form-label">Currency</label>
-                            <select id="currencySelector" name="currency" class="form-input">
-                                <option value="GBP" selected>🇬🇧 British Pound (£)</option>
-                                <option value="USD">🇺🇸 US Dollar ($)</option>
-                                <option value="EUR">🇪🇺 Euro (€)</option>
-                                <option value="AUD">🇦🇺 Australian Dollar ($)</option>
-                                <option value="CAD">🇨🇦 Canadian Dollar ($)</option>
-                                <option value="NZD">🇳🇿 New Zealand Dollar ($)</option>
-                                <option value="CHF">🇨🇭 Swiss Franc (Fr)</option>
-                                <option value="JPY">🇯🇵 Japanese Yen (¥)</option>
-                                <option value="CNY">🇨🇳 Chinese Yuan (¥)</option>
-                                <option value="INR">🇮🇳 Indian Rupee (₹)</option>
-                                <option value="SGD">🇸🇬 Singapore Dollar ($)</option>
-                                <option value="HKD">🇭🇰 Hong Kong Dollar ($)</option>
-                                <option value="SEK">🇸🇪 Swedish Krona (kr)</option>
-                                <option value="NOK">🇳🇴 Norwegian Krone (kr)</option>
-                                <option value="DKK">🇩🇰 Danish Krone (kr)</option>
-                                <option value="PLN">🇵🇱 Polish Złoty (zł)</option>
-                                <option value="CZK">🇨🇿 Czech Koruna (Kč)</option>
-                                <option value="ZAR">🇿🇦 South African Rand (R)</option>
-                                <option value="BRL">🇧🇷 Brazilian Real (R$)</option>
-                                <option value="MXN">🇲🇽 Mexican Peso ($)</option>
-                            </select>
-                            <small style="display: block; margin-top: 8px; color: var(--color-text-secondary); font-size: 0.875rem;">
-                                Prices update with live exchange rates
-                            </small>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Step 2: Select Base Package -->
-                <div class="quote-step">
-                    <h3 class="quote-step-title">
-                        <span class="step-number">2</span>
-                        Select Base Package
-                    </h3>
-                <div class="package-selector">
-                <!-- BASIC -->
-                <label class="package-option">
-                    <input type="radio" name="basePackage" value="Basic Package" data-price="95">
-                    <div class="package-option-content">
-                        <h4>Basic Package</h4>
-                        <p class="package-price">£95</p>
-                        <ul class="package-features-list">
-                            <li>1 custom landing page</li>
-                            <li>Fully responsive design (desktop, tablet and mobile)</li>
-                            <li>Basic SEO setup</li>
-							<li>GitHub Pages hosting setup with HTTPS encryption</li>
-							<li>Favicon design</li>
-                            <li>Sticky navbar that stays visible for easier navigation and better conversions</li>
-                            <li>2 revisions, delivery in 2 days</li>
-                        </ul>
-                    </div>
-                </label>
-                
-                <!-- STANDARD -->
-                <label class="package-option">
-                    <input type="radio" name="basePackage" value="Standard Package" data-price="160">
-                    <div class="package-option-content">
-                        <h4>Standard Package</h4>
-                        <p class="package-price">£160</p>
-                        <ul class="package-features-list">
-                            <li>Everything in the Basic package</li>
-                            <li>2 additional pages (3 pages total)</li>
-                            <li>Logo design</li>
-                            <li>GA4 analytics setup with GDPR cookie banner</li>
-                            <li>sitemap.xml and robots.txt included</li>
-							<li>Contact form with Formspree (50 free submissions)</li>
-                            <li>3 revisions, delivery in 3 to 4 days</li>
-                        </ul>
-                    </div>
-                </label>
-                
-                <!-- PREMIUM -->
-                <label class="package-option">
-                    <input type="radio" name="basePackage" value="Premium Package" data-price="260">
-                    <div class="package-option-content">
-                        <h4>Premium Package</h4>
-                        <p class="package-price">£260</p>
-                        <ul class="package-features-list">
-                            <li>Everything in the Standard package</li>
-                            <li>2 more additional pages (5 pages total)</li>
-                            <li>Full SEO with WCAG friendly accessibility improvements</li>
-                            <li>Priority support</li>
-                            <li>5 revisions, delivery in 4 to 6 days</li>
-                        </ul>
-                    </div>
-                </label>
-            </div>
 
-
-
-                
-                <!-- Step 3: Optional Extras -->
-                <div class="quote-step">
-                    <h3 class="quote-step-title">
-                        <span class="step-number">3</span>
-                        Add Optional Extras
-                    </h3>
-                    
-                                <div class="extras-grid">
-                <!-- ADVANCED SEO -->
-                <label class="extra-option">
-                    <input type="checkbox" name="extras" value="Advanced SEO Upgrade" data-price="50">
-                    <div class="extra-content">
-                        <div class="extra-face extra-front">
-                            <h5>Advanced SEO Upgrade</h5>
-                            <p class="extra-price">£50</p>
-                            <button type="button" class="flip-btn" aria-label="Show details">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-                                Info
-                            </button>
-                        </div>
-                        <div class="extra-face extra-back">
-                            <p class="extra-desc">Deeper on page SEO, schema and structure. Ideal upgrade for Basic or Standard.</p>
-                            <p class="extra-price">£50</p>
-                            <button type="button" class="flip-btn" aria-label="Go back">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-                                Back
-                            </button>
-                        </div>
-                    </div>
-                </label>
-
-                <!-- DOMAIN SETUP -->
-                <label class="extra-option">
-                    <input type="checkbox" name="extras" value="Domain Setup" data-price="20">
-                    <div class="extra-content">
-                        <div class="extra-face extra-front">
-                            <h5>Domain Setup</h5>
-                            <p class="extra-price">£20</p>
-                            <button type="button" class="flip-btn" aria-label="Show details">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-                                Info
-                            </button>
-                        </div>
-                        <div class="extra-face extra-back">
-                            <p class="extra-desc">Connect and configure your custom domain.</p>
-                            <p class="extra-price">£20</p>
-                            <button type="button" class="flip-btn" aria-label="Go back">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-                                Back
-                            </button>
-                        </div>
-                    </div>
-                </label>
-
-                <!-- GA4 + COOKIE BANNER FOR BASIC -->
-                <label class="extra-option">
-                    <input type="checkbox" name="extras" value="GA4 + Cookie Banner (Basic)" data-price="20">
-                    <div class="extra-content">
-                        <div class="extra-face extra-front">
-                            <h5>GA4 Analytics + Cookie Banner</h5>
-                            <p class="extra-price">£20</p>
-                            <button type="button" class="flip-btn" aria-label="Show details">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-                                Info
-                            </button>
-                        </div>
-                        <div class="extra-face extra-back">
-                            <p class="extra-desc">GA4 setup with GDPR cookie banner. Included in Standard and Premium, optional for Basic.</p>
-                            <p class="extra-price">£20</p>
-                            <button type="button" class="flip-btn" aria-label="Go back">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-                                Back
-                            </button>
-                        </div>
-                    </div>
-                </label>
-
-                <!-- CONTACT FORM -->
-                <label class="extra-option">
-                    <input type="checkbox" name="extras" value="Contact Form" data-price="40">
-                    <div class="extra-content">
-                        <div class="extra-face extra-front">
-                            <h5>Contact Form</h5>
-                            <p class="extra-price">£40</p>
-                            <button type="button" class="flip-btn" aria-label="Show details">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-                                Info
-                            </button>
-                        </div>
-                        <div class="extra-face extra-back">
-                            <p class="extra-desc">Formspree contact form. First 50 submissions are free, then Formspree pricing applies.</p>
-                            <p class="extra-price">£40</p>
-                            <button type="button" class="flip-btn" aria-label="Go back">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-                                Back
-                            </button>
-                        </div>
-                    </div>
-                </label>
-
-                <!-- LOGO DESIGN -->
-                <label class="extra-option">
-                    <input type="checkbox" name="extras" value="Logo Design" data-price="30">
-                    <div class="extra-content">
-                        <div class="extra-face extra-front">
-                            <h5>Logo Design</h5>
-                            <p class="extra-price">£30</p>
-                            <button type="button" class="flip-btn" aria-label="Show details">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-                                Info
-                            </button>
-                        </div>
-                        <div class="extra-face extra-back">
-                            <p class="extra-desc">Logo design for Basic package. Standard and Premium already include a logo.</p>
-                            <p class="extra-price">£30</p>
-                            <button type="button" class="flip-btn" aria-label="Go back">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-                                Back
-                            </button>
-                        </div>
-                    </div>
-                </label>
-
-                <!-- QUOTE GENERATOR -->
-                <label class="extra-option">
-                    <input type="checkbox" name="extras" value="Interactive Quote Generator" data-price="100">
-                    <div class="extra-content">
-                        <div class="extra-face extra-front">
-                            <h5>Interactive Quote Generator</h5>
-                            <p class="extra-price">£100</p>
-                            <button type="button" class="flip-btn" aria-label="Show details">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-                                Info
-                            </button>
-                        </div>
-                        <div class="extra-face extra-back">
-                            <p class="extra-desc">Custom JavaScript quote calculator tailored to your services.</p>
-                            <p class="extra-price">£100</p>
-                            <button type="button" class="flip-btn" aria-label="Go back">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-                                Back
-                            </button>
-                        </div>
-                    </div>
-                </label>
-
-                <!-- FREE EXTRAS -->
-
-                <label class="extra-option free-option">
-                    <input type="checkbox" name="extras" value="Favicon Design" data-price="0" checked>
-                    <div class="extra-content">
-                        <div class="extra-face extra-front">
-                            <h5>Favicon Design</h5>
-                            <p class="extra-price">FREE</p>
-                            <button type="button" class="flip-btn" aria-label="Show details">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-                                Info
-                            </button>
-                        </div>
-                        <div class="extra-face extra-back">
-                            <p class="extra-desc">Custom browser tab icon for your brand.</p>
-                            <p class="extra-price">FREE</p>
-                            <button type="button" class="flip-btn" aria-label="Go back">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-                                Back
-                            </button>
-                        </div>
-                    </div>
-                </label>
-
-                <label class="extra-option free-option">
-                    <input type="checkbox" name="extras" value="Speed Optimisation" data-price="0" checked>
-                    <div class="extra-content">
-                        <div class="extra-face extra-front">
-                            <h5>Speed Optimisation</h5>
-                            <p class="extra-price">FREE</p>
-                            <button type="button" class="flip-btn" aria-label="Show details">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-                                Info
-                            </button>
-                        </div>
-                        <div class="extra-face extra-back">
-                            <p class="extra-desc">Optimised assets and clean code for fast loading.</p>
-                            <p class="extra-price">FREE</p>
-                            <button type="button" class="flip-btn" aria-label="Go back">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-                                Back
-                            </button>
-                        </div>
-                    </div>
-                </label>
-
-                <label class="extra-option free-option">
-                    <input type="checkbox" name="extras" value="Hosting Setup" data-price="0" checked>
-                    <div class="extra-content">
-                        <div class="extra-face extra-front">
-                            <h5>Hosting Setup</h5>
-                            <p class="extra-price">FREE</p>
-                            <button type="button" class="flip-btn" aria-label="Show details">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-                                Info
-                            </button>
-                        </div>
-                        <div class="extra-face extra-back">
-                            <p class="extra-desc">GitHub Pages setup included, no monthly hosting fees.</p>
-                            <p class="extra-price">FREE</p>
-                            <button type="button" class="flip-btn" aria-label="Go back">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-                                Back
-                            </button>
-                        </div>
-                    </div>
-                </label>
-            </div>
-
-            <div class="extra-pages-selector">
-                <label>
-                    <h5>Extra Pages</h5>
-                    <p>Additional pages beyond base package (£30 each)</p>
-                </label>
-                <input type="number" id="extraPages" min="0" value="0">
-            </div>
-
-                
-                <!-- Quote Summary -->
-                <div class="quote-summary">
-                    <div class="quote-summary-content">
-                        <h4>Your Quote Summary</h4>
-                        <div class="quote-breakdown" id="quoteBreakdown">
-                            <p class="quote-empty">Fill in your details and select a package to start</p>
-                        </div>
-                        <div class="quote-total">
-                            <span>Total:</span>
-                            <span class="quote-total-price" id="quoteTotal">£0.00</span>
-                        </div>
-                        <div class="quote-valid" id="quoteValidSection" style="display: none;">
-                            <p><strong>Quote Valid:</strong></p>
-                            <p id="quoteExpiry"></p>
-                        </div>
-                        <button class="btn btn-glow" id="requestQuoteBtn" disabled>Request Quote</button>
-                        <p class="form-note" style="margin-top: 12px; font-size: 0.875rem;">PDF will download and form will be pre-filled</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- ===================================
-         PROCESS SECTION
-         =================================== -->
-    <section class="process" id="process">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">How It Works</h2>
-                <p class="section-subtitle">Simple, transparent process from start to finish</p>
-            </div>
-            
-            <div class="process-grid">
-                <div class="process-step">
-                    <div class="step-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/>
-                        </svg>
-                    </div>
-                    <h3 class="step-title">1. Choose Package</h3>
-                    <p class="step-desc">Select the package that fits your needs and add any extras you'd like.</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
-                        </svg>
-                    </div>
-                    <h3 class="step-title">2. Share Vision</h3>
-                    <p class="step-desc">Tell me about your business, brand, and what you want to achieve.</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
-                        </svg>
-                    </div>
-                    <h3 class="step-title">3. Design & Build</h3>
-                    <p class="step-desc">I'll create your landing page with modern design and clean code.</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                        </svg>
-                    </div>
-                    <h3 class="step-title">4. Launch</h3>
-                    <p class="step-desc">Review, refine, and launch your new site. I'll handle everything.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- ===================================
-         ABOUT SECTION
-         =================================== -->
-    <section class="about" id="about">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title">About Liam Designs</h2>
-            <p class="section-subtitle">Custom, hand coded websites for real businesses</p>
-        </div>
-        
-        <div class="about-content">
-            <div class="about-text">
-                <p>
-                    I build fast, clean and fully custom websites using hand written HTML, CSS and JavaScript. 
-                    No WordPress, no page builders, no pre made templates. Every project is coded from scratch 
-                    to match your brand, your content and the goals of your business.
-                </p>
-                <p>
-                    I focus on clear structure, easy navigation and responsive layouts that work perfectly on 
-                    mobiles, tablets and desktops. Whether you need a simple landing page or a small multi page 
-                    site, you get lightweight code, SEO friendly markup and a site that is easy to maintain and 
-                    host, for example on GitHub Pages or your own hosting.
-                </p>
-            </div>
-            
-            <div class="skills-tags">
-                <span class="skill-tag">HTML</span>
-                <span class="skill-tag">CSS</span>
-                <span class="skill-tag">JavaScript</span>
-                <span class="skill-tag">Responsive Layouts</span>
-                <span class="skill-tag">Landing Pages</span>
-                <span class="skill-tag">Small Business Websites</span>
-                <span class="skill-tag">Clean, Hand Written Code</span>
-                <span class="skill-tag">Performance Optimisation</span>
-                <span class="skill-tag">On Page SEO</span>
-                <span class="skill-tag">Form Integration (Formspree)</span>
-                <span class="skill-tag">GitHub Pages Hosting</span>
-                <span class="skill-tag">Subtle Animations</span>
-            </div>
-        </div>
-    </div>
-</section>
-    
-    <!-- ===================================
-         FAQ SECTION
-         =================================== -->
-    <section class="faq" id="faq">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <p class="section-subtitle">Common questions about my web design services</p>
-        </div>
-        
-        <div class="faq-list">
-
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    <span>What do your packages include?</span>
-                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                        <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/>
-                    </svg>
-                </button>
-                <div class="faq-answer">
-                    <p>
-                        All packages include a fully custom, hand coded website using HTML, CSS and JavaScript, 
-                        built to match your content and brand. Every site is responsive, fast loading and SEO friendly. 
-                        Higher tier packages include more sections or pages plus optional add ons like animations, 
-                        FAQs, pricing tables, or a quote generator.
-                    </p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    <span>How long does a project take?</span>
-                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                        <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/>
-                    </svg>
-                </button>
-                <div class="faq-answer">
-                    <p>
-                        Delivery time depends on the package you choose and how complex the design is. 
-                        Most landing pages are completed within a few days, while multi page sites take longer. 
-                        I always aim to deliver quickly without sacrificing quality.
-                    </p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    <span>Do you provide hosting?</span>
-                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                        <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/>
-                    </svg>
-                </button>
-                <div class="faq-answer">
-                    <p>
-                        I provide free hosting through GitHub Pages, which is fast, reliable and perfect for static websites. 
-                        Your site can be hosted at no monthly cost, and I handle the full setup for you. 
-                        If you prefer to use your own hosting provider instead, I can deploy the site there and connect your domain.
-                    </p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    <span>Can you build any style of website?</span>
-                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                        <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/>
-                    </svg>
-                </button>
-                <div class="faq-answer">
-                    <p>
-                        Yes. Whether you want a clean minimal layout, a bold colourful design, a dark modern theme, 
-                        or a professional corporate style, I hand code everything to match your preferred look and feel. 
-                        No templates or builders are used.
-                    </p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    <span>Can I make changes to the site after delivery?</span>
-                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                        <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/>
-                    </svg>
-                </button>
-                <div class="faq-answer">
-                    <p>
-                        Yes. Your site is delivered as clean, easy to edit HTML, CSS and JS files. 
-                        If you prefer ongoing updates, I also offer optional maintenance or additional 
-                        update work through Fiverr as needed.
-                    </p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    <span>Do you offer revisions?</span>
-                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                        <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/>
-                    </svg>
-                </button>
-                <div class="faq-answer">
-                    <p>
-                        Yes. All packages come with revisions based on the Fiverr tier you select. 
-                        My goal is to make sure your website looks and functions exactly how you want it.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-    
-    <!-- ===================================
-         CONTACT SECTION
-         =================================== -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Ready to start your project? Send me a message</p>
-            </div>
-            
-            <div class="contact-content">
-                <form class="contact-form" id="contactForm">
-                    <!-- Getform.io submission handled via JavaScript -->
-                    
-                    <div class="form-group">
-                        <label for="contactName" class="form-label">Your Name *</label>
-                        <input type="text" id="contactName" name="name" class="form-input" placeholder="John Smith" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="contactBusiness" class="form-label">Business Name *</label>
-                        <input type="text" id="contactBusiness" name="business" class="form-input" placeholder="Your Company Ltd" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="contactEmail" class="form-label">Email Address *</label>
-                        <input type="email" id="contactEmail" name="email" class="form-input" placeholder="you@example.com" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message" class="form-label">Message *</label>
-                        <textarea id="message" name="message" class="form-input form-textarea" placeholder="Tell me about your project..." required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-glow">Send Message</button>
-                    
-                    <p class="form-note">I'll get back to you within 24 hours</p>
-                </form>
-            </div>
-        </div>
-    </section>
-    
-    <!-- ===================================
-         FOOTER
-         =================================== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p class="footer-text">&copy; 2026 Liam Designs. All rights reserved.</p>
-                <p class="footer-text">Designed &amp; built by Liam Designs</p>
-                <div class="footer-links">
-                    <a href="#home" class="footer-link">Home</a>
-                    <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
-                    <a href="sitemap.xml" class="footer-link">Sitemap</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- ===================================
-     COOKIE BANNER FOR GA4
-     =================================== -->
-<div id="cookie-banner" class="cookie-banner">
-    <div class="cookie-banner-inner">
-        <p class="cookie-text">
-            I use Google Analytics (GA4) to collect anonymous usage data and improve this site.
-            You can choose whether to allow analytics cookies.
-        </p>
-        <div class="cookie-actions">
-            <button id="cookie-accept" class="cookie-btn cookie-btn-accept">Accept analytics</button>
-            <button id="cookie-reject" class="cookie-btn cookie-btn-reject">Reject</button>
-        </div>
-    </div>
+<!-- NAV -->
+<div class="nav-wrap" id="navWrap">
+  <nav class="nav container">
+    <a href="#home" class="nav-logo" aria-label="Liam Designs home">
+      <img src="logo.png" alt="Liam Designs" height="36" fetchpriority="high">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#services">Packages</a></li>
+      <li><a href="#quote">Get quote</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="https://www.fiverr.com/liamh96/" target="_blank" rel="noopener" class="nav-cta">Hire Me on Fiverr</a></li>
+    </ul>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 </div>
 
+<nav class="nav-mobile" id="navMobile" aria-label="Mobile navigation">
+  <a href="#portfolio" onclick="closeMobileNav()">Portfolio</a>
+  <a href="#services" onclick="closeMobileNav()">Packages</a>
+  <a href="#quote" onclick="closeMobileNav()">Get quote</a>
+  <a href="#process" onclick="closeMobileNav()">Process</a>
+  <a href="#about" onclick="closeMobileNav()">About</a>
+  <a href="#faq" onclick="closeMobileNav()">FAQ</a>
+  <a href="#contact" onclick="closeMobileNav()">Contact</a>
+  <a href="https://www.fiverr.com/liamh96/" target="_blank" rel="noopener" class="cta" onclick="closeMobileNav()">Hire Me on Fiverr</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-grid"></div>
+  </div>
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <div class="hero-label">
+        <span class="hero-dot"></span>
+        <span>Available for projects</span>
+      </div>
+      <h1 class="hero-h1 display">
+        Custom websites.<br>
+        <em>Hand coded.</em><br>
+        Built to convert.
+      </h1>
+      <p class="hero-desc">No templates, no builders. I create fast, responsive websites designed to make your brand look professional and turn visitors into customers.</p>
+      <div class="hero-actions">
+        <a href="#quote" class="btn btn-primary btn-lg">Get a free quote</a>
+        <a href="#portfolio" class="btn btn-outline btn-lg">View my work</a>
+      </div>
+      <div class="hero-trust">
+        <div class="hero-trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+          <strong>Built for conversions</strong>
+        </div>
+        <div class="hero-trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+          <strong>Mobile optimised</strong>
+        </div>
+        <div class="hero-trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+          <strong>No templates</strong>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-screen">
+        <div class="screen-bar">
+          <span class="screen-dot"></span><span class="screen-dot"></span><span class="screen-dot"></span>
+          <div class="screen-url"><span>liamdesigns.dev</span></div>
+        </div>
+        <div class="screen-body">
+          <div class="sb-hero">
+            <span class="sb-pulse"></span>
+            <span class="sb-text">Custom Coded</span>
+          </div>
+          <div class="sb-grid">
+            <div class="sb-card"></div>
+            <div class="sb-card"></div>
+            <div class="sb-card"></div>
+          </div>
+          <div class="sb-lines">
+            <div class="sb-line"></div>
+            <div class="sb-line"></div>
+            <div class="sb-line"></div>
+          </div>
+          <div class="sb-bar">
+            <span class="sb-bar-dot"></span>
+            <div class="sb-bar-line"><div class="sb-bar-fill"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-float-tag">
+        <div class="hft-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+        </div>
+        <div class="hft-text"><strong>Clean, fast code</strong>No page builders</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-strip">
+  <div class="marquee-track" id="marqueeTrack">
+    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>HTML &amp; CSS</div>
+    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Vanilla JavaScript</div>
+    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Fully Responsive</div>
+    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>SEO Optimised</div>
+    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Performance Focused</div>
+    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>No Templates</div>
+    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>UK Based</div>
+    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Static Hosting Setup</div>
+    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Fast Delivery</div>
+    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Available on Fiverr</div>
+    <!-- duplicate for seamless loop -->
+    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>HTML &amp; CSS</div>
+    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Vanilla JavaScript</div>
+    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Fully Responsive</div>
+    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>SEO Optimised</div>
+    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Performance Focused</div>
+    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>No Templates</div>
+    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>UK Based</div>
+    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Static Hosting Setup</div>
+    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Fast Delivery</div>
+    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Available on Fiverr</div>
+  </div>
+</div>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" style="position:relative">
+  <div style="position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:0"><div style="position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(123,108,255,0.06),transparent 70%);top:-100px;right:-100px;filter:blur(60px)"></div></div>
+  <div class="container">
+    <div style="position:relative;z-index:1">
+    <div class="section-header">
+      <p class="eyebrow reveal">Selected Work</p>
+      <h2 class="section-title reveal reveal-delay-1">Recent Projects</h2>
+      <p class="section-sub reveal reveal-delay-2">Selected examples showcasing different industries, aesthetics and layouts, all hand-coded.</p>
+    </div>
+    <div class="portfolio-grid">
+      <div class="port-card reveal">
+        <div class="port-img-wrap">
+          <img src="portfolio/Velion.png" alt="VELION Finance Platform" width="600" height="375" loading="lazy">
+          <div class="port-overlay"><a href="portfolio/Velion/" target="_blank">View VELION Demo</a></div>
+        </div>
+        <div class="port-info">
+          <p class="port-tag">Finance</p>
+          <h3 class="port-title">VELION</h3>
+          <p class="port-desc">A bright, balanced design with smooth gradients and crisp typography, polished and built for trust.</p>
+        </div>
+      </div>
+      <div class="port-card reveal reveal-delay-1">
+        <div class="port-img-wrap">
+          <img src="portfolio/NovaFrame.png" alt="NovaFrame Engineering Website" width="600" height="375" loading="lazy">
+          <div class="port-overlay"><a href="portfolio/NovaFrame/" target="_blank">View NovaFrame Demo</a></div>
+        </div>
+        <div class="port-info">
+          <p class="port-tag">Engineering</p>
+          <h3 class="port-title">NovaFrame</h3>
+          <p class="port-desc">Dark, futuristic interface with glowing accents and precise structure. A tech-driven aesthetic built for serious engineering.</p>
+        </div>
+      </div>
+      <div class="port-card reveal reveal-delay-2">
+        <div class="port-img-wrap">
+          <img src="portfolio/BrightWave.png" alt="BrightWave Electrical" width="600" height="375" loading="lazy">
+          <div class="port-overlay"><a href="portfolio/BrightWave/" target="_blank">View BrightWave Demo</a></div>
+        </div>
+        <div class="port-info">
+          <p class="port-tag">Trades</p>
+          <h3 class="port-title">BrightWave Electrical</h3>
+          <p class="port-desc">Polished dark theme highlighting expertise, trust and reliability for a professional trade business.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section id="services">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow reveal">Transparent pricing</p>
+      <h2 class="section-title reveal reveal-delay-1">Packages</h2>
+      <p class="section-sub reveal reveal-delay-2">Every package is hand-coded from scratch. Pick what fits, add what you need.</p>
+    </div>
+    <div class="packages-grid reveal">
+      <!-- BASIC -->
+      <div class="pkg">
+        <p class="pkg-name">Basic</p>
+        <div class="pkg-price-wrap">
+          <span class="pkg-price-cur">£</span>
+          <span class="pkg-price">99</span>
+        </div>
+        <p class="pkg-tagline">Perfect for portfolios, creators, and small businesses wanting a clean online presence.</p>
+        <div class="pkg-divider"></div>
+        <ul class="pkg-features">
+          <li class="pkg-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Custom landing page</li>
+          <li class="pkg-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Fully responsive and mobile optimised design</li>
+          <li class="pkg-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Essential SEO optimisation</li>
+          <li class="pkg-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Custom favicon</li>
+          <li class="pkg-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Hosting, deployment and domain connection</li>
+          <li class="pkg-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>2 revisions</li>
+        </ul>
+        <a href="#quote" class="btn btn-outline pkg-cta" style="justify-content:center;">Get started</a>
+      </div>
+      <!-- STANDARD -->
+      <div class="pkg featured">
+        <div class="pkg-featured-badge">Most Popular</div>
+        <p class="pkg-name">Standard</p>
+        <div class="pkg-price-wrap">
+          <span class="pkg-price-cur">£</span>
+          <span class="pkg-price">349</span>
+        </div>
+        <p class="pkg-tagline">For businesses needing a stronger presence with multiple pages and stronger visual identity.</p>
+        <div class="pkg-divider"></div>
+        <ul class="pkg-features">
+          <li class="pkg-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Up to 3 custom pages</li>
+          <li class="pkg-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Fully responsive and mobile optimised design</li>
+          <li class="pkg-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Essential SEO optimisation</li>
+          <li class="pkg-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Custom favicon and integrated social links</li>
+          <li class="pkg-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Hosting, deployment and domain connection</li>
+          <li class="pkg-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Premium UI styling</li>
+          <li class="pkg-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>3 revisions</li>
+        </ul>
+        <a href="#quote" class="btn btn-primary pkg-cta" style="justify-content:center;">Get started</a>
+      </div>
+      <!-- PREMIUM -->
+      <div class="pkg pkg-premium">
+        <p class="pkg-name">Premium</p>
+        <div class="pkg-price-wrap">
+          <span class="pkg-price-cur">£</span>
+          <span class="pkg-price">799</span>
+        </div>
+        <p class="pkg-tagline">High-end custom website with advanced visuals, stronger branding, and a polished user experience.</p>
+        <div class="pkg-divider"></div>
+        <ul class="pkg-features">
+          <li class="pkg-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Up to 5 custom pages</li>
+          <li class="pkg-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Enhanced SEO optimisation</li>
+          <li class="pkg-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Premium UI/UX styling</li>
+          <li class="pkg-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Enhanced interactions</li>
+          <li class="pkg-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Priority post-delivery support</li>
+          <li class="pkg-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Hosting, deployment and domain connection</li>
+          <li class="pkg-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>4 revisions</li>
+        </ul>
+        <a href="#quote" class="btn btn-gold pkg-cta" style="text-align:center;justify-content:center;">Get started</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FIVERR -->
+<section>
+  <div class="container">
+    <div class="fiverr-banner reveal">
+      <div class="fiverr-badge"><span>Available on Fiverr</span></div>
+      <h2 class="fiverr-h2 display">Work with me through Fiverr</h2>
+      <p class="fiverr-sub">Prefer using Fiverr? You can order securely through my profile with clear packages and protected payments.</p>
+      <div class="fiverr-feats">
+        <div class="fiverr-feat"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Custom coded websites</div>
+        <div class="fiverr-feat"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Clear communication</div>
+        <div class="fiverr-feat"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Secure Fiverr payment</div>
+        <div class="fiverr-feat"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Quality-focused work</div>
+      </div>
+      <a href="https://www.fiverr.com/liamh96/" target="_blank" rel="noopener" class="btn btn-gold btn-lg">View my Fiverr gig</a>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE BUILDER -->
+<section class="quote-section" id="quote">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow reveal">Instant pricing</p>
+      <h2 class="section-title reveal reveal-delay-1">Get Your Quote</h2>
+      <p class="section-sub reveal reveal-delay-2">Build your package and see an estimated price in real time.</p>
+    </div>
+    <div class="quote-wrap">
+      <div class="quote-form-panel">
+
+        <!-- Step 1 -->
+        <div class="q-step reveal">
+          <div class="q-step-head">
+            <div class="q-step-num">1</div>
+            <h3>Your details</h3>
+          </div>
+          <div class="q-grid-2">
+            <div>
+              <label class="q-label" for="qName">Name</label>
+              <input class="q-input" type="text" id="qName" placeholder="John Smith">
+            </div>
+            <div>
+              <label class="q-label" for="qBusiness">Business name</label>
+              <input class="q-input" type="text" id="qBusiness" placeholder="Your Company Ltd">
+            </div>
+            <div>
+              <label class="q-label" for="qEmail">Email address</label>
+              <input class="q-input" type="email" id="qEmail" placeholder="you@example.com">
+            </div>
+            <div>
+              <label class="q-label" for="qCurrency">Currency</label>
+              <select class="q-input" id="qCurrency" onchange="enforceAddonLogic();updateQuote()">
+                <option value="GBP">GBP (£)</option>
+                <option value="USD">USD ($)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="q-step reveal reveal-delay-1">
+          <div class="q-step-head">
+            <div class="q-step-num">2</div>
+            <h3>Select a package</h3>
+          </div>
+          <div class="q-packages" id="qPackages">
+            <div class="q-pkg" data-pkg="basic" data-gbp="99" data-usd="99" onclick="selectPkg(this)">
+              <div class="q-radio"></div>
+              <div class="q-pkg-info">
+                <div class="q-pkg-name">Basic</div>
+                <div class="q-pkg-desc">Custom landing page, responsive, SEO, hosting</div>
+              </div>
+              <div class="q-pkg-price">£99</div>
+            </div>
+            <div class="q-pkg" data-pkg="standard" data-gbp="349" data-usd="299" onclick="selectPkg(this)">
+              <div class="q-radio"></div>
+              <div class="q-pkg-info">
+                <div class="q-pkg-name">Standard</div>
+                <div class="q-pkg-desc">Up to 3 pages, premium UI, branding</div>
+              </div>
+              <div class="q-pkg-price">£349</div>
+            </div>
+            <div class="q-pkg" data-pkg="premium" data-gbp="799" data-usd="799" onclick="selectPkg(this)">
+              <div class="q-radio"></div>
+              <div class="q-pkg-info">
+                <div class="q-pkg-name">Premium</div>
+                <div class="q-pkg-desc">Up to 5 pages, advanced UI/UX, priority support</div>
+              </div>
+              <div class="q-pkg-price">£799</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="q-step reveal reveal-delay-2">
+          <div class="q-step-head">
+            <div class="q-step-num">3</div>
+            <h3>Add-ons</h3>
+          </div>
+          <div class="q-extras" id="qExtras">
+            <div class="q-extra" data-gbp="50" data-usd="50" data-key="logo" onclick="toggleExtra(this)">
+              <div class="q-checkbox"></div>
+              <span class="q-extra-name">Logo Design</span>
+              <span class="q-extra-price">£50</span>
+            </div>
+            <div class="q-extra" data-gbp="25" data-usd="25" data-key="contact" onclick="toggleExtra(this)">
+              <div class="q-checkbox"></div>
+              <span class="q-extra-name">Contact Form Setup</span>
+              <span class="q-extra-price">£25</span>
+            </div>
+            <div class="q-extra" data-gbp="35" data-usd="35" data-key="analytics" onclick="toggleExtra(this)">
+              <div class="q-checkbox"></div>
+              <span class="q-extra-name">Analytics and Cookie Banner</span>
+              <span class="q-extra-price">£35</span>
+            </div>
+            <div class="q-extra" data-gbp="20" data-usd="20" data-key="privacy" onclick="toggleExtra(this)">
+              <div class="q-checkbox"></div>
+              <span class="q-extra-name">Privacy Policy Page</span>
+              <span class="q-extra-price">£20</span>
+            </div>
+            <div class="q-extra" data-gbp="50" data-usd="50" data-key="seo" onclick="toggleExtra(this)">
+              <div class="q-checkbox"></div>
+              <span class="q-extra-name">Enhanced SEO Package</span>
+              <span class="q-extra-price" id="seoExtraPrice">£50</span>
+            </div>
+            <div class="q-extra" data-gbp="25" data-usd="25" data-key="revision" onclick="toggleExtra(this)">
+              <div class="q-checkbox"></div>
+              <span class="q-extra-name">Additional Revision</span>
+              <span class="q-extra-price">£25</span>
+            </div>
+          </div>
+          <div class="extra-pages-row" style="margin-top:0.75rem">
+            <div class="extra-pages-label">
+              Additional pages
+              <span>From £50 each, beyond your package limit</span>
+            </div>
+            <div class="extra-pages-ctrl">
+              <button class="ep-btn" id="epMinus" onclick="changePages(-1)">−</button>
+              <span class="ep-count" id="epCount">0</span>
+              <button class="ep-btn" id="epPlus" onclick="changePages(1)">+</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SIDEBAR SUMMARY -->
+      <div class="quote-sidebar">
+        <div class="quote-summary-card">
+          <div class="qsc-head">
+            <h4>Quote Summary</h4>
+            <p>Updates in real time</p>
+          </div>
+          <div class="qsc-body">
+            <div class="qsc-breakdown" id="qscBreakdown">
+              <p class="qsc-empty">Select a package to begin</p>
+            </div>
+            <div class="qsc-divider"></div>
+            <div class="qsc-total-row">
+              <span class="qsc-total-label">Estimated Total</span>
+              <span class="qsc-total-price" id="qscTotal">£0</span>
+            </div>
+            <button class="btn btn-primary qsc-cta" id="qscCta" onclick="submitQuote()" disabled>Request this quote</button>
+            <p class="qsc-note">Opens a pre-filled email request</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow reveal">How it works</p>
+      <h2 class="section-title reveal reveal-delay-1">Simple process, great results</h2>
+      <p class="section-sub reveal reveal-delay-2">From first message to live website, with a clear and straightforward process.</p>
+    </div>
+    <div class="process-grid reveal">
+      <div class="proc-step active">
+        <div class="proc-num">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm-1 7V3.5L18.5 9H13z"/></svg>
+        </div>
+        <div class="proc-badge">Step 1</div>
+        <h3 class="proc-title">Project brief</h3>
+        <p class="proc-desc">Share your goals, brand, and what you need. We agree scope before anything begins.</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+        </div>
+        <div class="proc-badge">Step 2</div>
+        <h3 class="proc-title">Design direction</h3>
+        <p class="proc-desc">I propose a visual direction based on your brand and target audience. Quick to align, no guesswork.</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+        </div>
+        <div class="proc-badge">Step 3</div>
+        <h3 class="proc-title">Build and refine</h3>
+        <p class="proc-desc">I hand-code your site from scratch. You review, we refine. Revisions are built into every package.</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+        </div>
+        <div class="proc-badge">Step 4</div>
+        <h3 class="proc-title">Launch</h3>
+        <p class="proc-desc">I deploy your site and connect your domain. You go live with a fast, polished, professional website.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <p class="eyebrow reveal">About</p>
+        <h2 class="section-title reveal reveal-delay-1">Liam Designs</h2>
+        <div class="about-text reveal reveal-delay-2">
+          <p>I build modern, custom-coded websites for businesses, startups and creators. My focus is clean design, fast performance, responsive layouts and clear communication.</p>
+          <p>Every project is built from scratch, without templates or website builders. You get a site that is genuinely yours, optimised for speed, easy to maintain, and designed to make a good impression from the first visit.</p>
+        </div>
+        <div class="skills-wrap reveal reveal-delay-3">
+          <span class="skill-pill">HTML</span>
+          <span class="skill-pill">CSS</span>
+          <span class="skill-pill">JavaScript</span>
+          <span class="skill-pill">Responsive Layouts</span>
+          <span class="skill-pill">Landing Pages</span>
+          <span class="skill-pill">Small Business Websites</span>
+          <span class="skill-pill">Performance Optimisation</span>
+          <span class="skill-pill">On-Page SEO</span>
+          <span class="skill-pill">Form Integration</span>
+          <span class="skill-pill">GitHub Pages</span>
+          <span class="skill-pill">Subtle Animations</span>
+        </div>
+      </div>
+      <div class="about-stats reveal reveal-delay-1">
+        <div class="stat-card">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Custom coded, no templates or builders</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">Fast</div>
+          <div class="stat-label">Optimised for performance from day one</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">Mobile</div>
+          <div class="stat-label">Responsive layouts across every device</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">UK</div>
+          <div class="stat-label">Based in the UK, available worldwide</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow reveal">FAQ</p>
+      <h2 class="section-title reveal reveal-delay-1">Frequently Asked Questions</h2>
+      <p class="section-sub reveal reveal-delay-2">Common questions about my web design services.</p>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>What do your packages include?</span>
+          <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">All packages include a fully custom, hand-coded website using HTML, CSS and JavaScript, built to match your brand. Every site is responsive, fast-loading and SEO-friendly. Higher tier packages include more pages plus optional add-ons like animations, contact forms, or a quote generator.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>How long does a project take?</span>
+          <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">Most landing pages are completed within a few days, while multi-page sites take longer depending on complexity. I always aim to deliver quickly without sacrificing quality.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>Do you provide hosting?</span>
+          <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">Yes, hosting and deployment setup is included where suitable. Most sites I build are fast static websites, ideal for modern static hosting. If you already have a preferred hosting provider, I can deploy the site there and connect your domain.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>Can you build any style of website?</span>
+          <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">Absolutely. Whether you want minimal, bold, dark, colourful or corporate, I hand-code everything to match your preferred look. No templates or builders are ever used.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>Can I make changes after delivery?</span>
+          <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">Yes. Your site is delivered as clean, easy-to-edit HTML, CSS and JS files. If you prefer ongoing updates, I also offer optional maintenance or additional update work.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>Do you offer revisions?</span>
+          <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">Yes. Each package includes a set number of revision rounds. Revisions cover reasonable tweaks and refinements to the agreed design. Major direction changes, new pages, new features or work outside the original scope may require an additional quote.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>Do you build websites with databases, logins or customer accounts?</span>
+          <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">My standard packages cover custom static websites and landing pages. Backend systems, databases, user accounts, ecommerce carts, customer portals and stored customer data are not included unless specifically agreed as a custom project.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-wrap">
+      <div class="contact-info reveal">
+        <p class="eyebrow" style="margin-bottom:0.75rem">Let's talk</p>
+        <h2>Get in touch</h2>
+        <p>Ready to start your project? Send me a message and I'll get back to you within 24 hours.</p>
+        <a href="mailto:hello@liamdesigns.dev" class="contact-link">
+          <div class="contact-link-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </div>
+          <div class="contact-link-text">
+            <small>Email</small>
+            hello@liamdesigns.dev
+          </div>
+        </a>
+        <a href="https://www.fiverr.com/liamh96/" target="_blank" rel="noopener" class="contact-link">
+          <div class="contact-link-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+          </div>
+          <div class="contact-link-text">
+            <small>Fiverr</small>
+            fiverr.com/liamh96
+          </div>
+        </a>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <form id="contactForm" onsubmit="submitContact(event)">
+          <div class="form-group">
+            <label class="form-label" for="contactName">Your name</label>
+            <input class="form-input" type="text" id="contactName" name="name" placeholder="John Smith" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="contactBusiness">Business name</label>
+            <input class="form-input" type="text" id="contactBusiness" name="business" placeholder="Your Company Ltd" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="contactEmail">Email address</label>
+            <input class="form-input" type="email" id="contactEmail" name="email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="contactMessage">Message</label>
+            <textarea class="form-input" id="contactMessage" name="message" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%">Send Message</button>
+          <p class="form-note">I'll get back to you within 24 hours</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="logo.png" alt="Liam Designs" class="footer-logo" onerror="this.style.display='none'">
+        <p class="footer-tagline">Custom coded websites for businesses, startups and creators.</p>
+        <div class="footer-contact-links">
+          <a href="mailto:hello@liamdesigns.dev" class="footer-contact-link">hello@liamdesigns.dev</a>
+          <a href="https://www.fiverr.com/liamh96/" target="_blank" rel="noopener" class="footer-contact-link">fiverr.com/liamh96</a>
+        </div>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div class="footer-nav-col">
+          <span class="footer-nav-label">Navigate</span>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#services">Packages</a>
+          <a href="#quote">Get quote</a>
+          <a href="#process">Process</a>
+        </div>
+        <div class="footer-nav-col">
+          <span class="footer-nav-label">More</span>
+          <a href="#about">About</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; <span id="footerYear"></span> Liam Designs. All rights reserved.</p>
+      <a href="sitemap.xml" class="footer-sitemap">Sitemap</a>
+    </div>
+  </div>
+</footer>
+
+
 <script>
-    const GA_MEASUREMENT_ID = "G-KK1YG37ZN2";
+// ──────────────────────────────────
+// NAV
+// ──────────────────────────────────
+const navWrap = document.getElementById('navWrap');
+window.addEventListener('scroll', () => {
+  navWrap.classList.toggle('scrolled', window.scrollY > 40);
+}, { passive: true });
 
-    function loadAnalytics() {
-        if (!GA_MEASUREMENT_ID) return;
-        if (window.ga4Loaded) return;
-        window.ga4Loaded = true;
+const hamburger = document.getElementById('navHamburger');
+const navMobile = document.getElementById('navMobile');
+hamburger.addEventListener('click', () => {
+  const open = navMobile.classList.toggle('open');
+  hamburger.setAttribute('aria-expanded', open);
+});
+function closeMobileNav() {
+  navMobile.classList.remove('open');
+  hamburger.setAttribute('aria-expanded', false);
+}
 
-        const gtagScript = document.createElement("script");
-        gtagScript.async = true;
-        gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_MEASUREMENT_ID;
-        document.head.appendChild(gtagScript);
+// ──────────────────────────────────
+// SCROLL REVEAL
+// ──────────────────────────────────
+const revealEls = document.querySelectorAll('.reveal');
+const revealObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+revealEls.forEach(el => revealObs.observe(el));
 
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){ dataLayer.push(arguments); }
-        window.gtag = gtag;
-
-        gtag("js", new Date());
-        gtag("config", GA_MEASUREMENT_ID);
-    }
-
-    function hideBanner() {
-        const banner = document.getElementById("cookie-banner");
-        if (banner) banner.style.display = "none";
-    }
-
-    document.addEventListener("DOMContentLoaded", function () {
-        const stored = localStorage.getItem("analytics_consent");
-
-        if (stored === "accepted") {
-            loadAnalytics();
-            hideBanner();
-            return;
-        }
-
-        if (stored === "rejected") {
-            hideBanner();
-            return;
-        }
-
-        const acceptBtn = document.getElementById("cookie-accept");
-        const rejectBtn = document.getElementById("cookie-reject");
-
-        if (acceptBtn) {
-            acceptBtn.addEventListener("click", function () {
-                localStorage.setItem("analytics_consent", "accepted");
-                loadAnalytics();
-                hideBanner();
-            });
-        }
-
-        if (rejectBtn) {
-            rejectBtn.addEventListener("click", function () {
-                localStorage.setItem("analytics_consent", "rejected");
-                hideBanner();
-            });
-        }
+// ──────────────────────────────────
+// FAQ
+// ──────────────────────────────────
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-answer').style.maxHeight = '0';
+      i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
     });
+    if (!isOpen) {
+      item.classList.add('open');
+      item.querySelector('.faq-answer').style.maxHeight = item.querySelector('.faq-answer-inner').scrollHeight + 'px';
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+// ──────────────────────────────────
+// QUOTE BUILDER - hard-coded GBP/USD prices, no conversion
+// ──────────────────────────────────
+const PKG_PRICES = {
+  GBP: { basic: 99, standard: 349, premium: 799 },
+  USD: { basic: 99, standard: 299, premium: 799 }
+};
+const ADDON_PRICES = {
+  GBP: { logo: 50, contact: 25, analytics: 35, privacy: 20, seo: 50, revision: 25 },
+  USD: { logo: 50, contact: 25, analytics: 35, privacy: 20, seo: 50, revision: 25 }
+};
+const EXTRA_PAGE_PRICE = { GBP: 50, USD: 50 };
+const CURRENCY_SYMS = { GBP: '£', USD: '$' };
+
+let extraPages = 0;
+
+function getCurrency() { return document.getElementById('qCurrency').value; }
+function getSym()      { return CURRENCY_SYMS[getCurrency()] || '£'; }
+function fmt(n)        { return getSym() + n.toLocaleString(); }
+
+function getPkgPrice(el) {
+  const cur = getCurrency();
+  const key = el.dataset.pkg;
+  return (PKG_PRICES[cur] && PKG_PRICES[cur][key]) ? PKG_PRICES[cur][key] : 0;
+}
+
+function getAddonPrice(el) {
+  const cur = getCurrency();
+  const key = el.dataset.key;
+  return (ADDON_PRICES[cur] && ADDON_PRICES[cur][key] !== undefined) ? ADDON_PRICES[cur][key] : 0;
+}
+
+function selectPkg(el) {
+  document.querySelectorAll('.q-pkg').forEach(p => p.classList.remove('selected'));
+  el.classList.add('selected');
+  enforceAddonLogic();
+  updateQuote();
+}
+
+function toggleExtra(el) {
+  if (el.classList.contains('included')) return;
+  el.classList.toggle('selected');
+  updateQuote();
+}
+
+function enforceAddonLogic() {
+  const selPkg = document.querySelector('.q-pkg.selected');
+  const pkg = selPkg ? selPkg.dataset.pkg : null;
+  const seoEl = document.querySelector('.q-extra[data-key="seo"]');
+  if (!seoEl) return;
+  if (pkg === 'premium') {
+    seoEl.classList.remove('selected');
+    seoEl.classList.add('included');
+    const priceEl = seoEl.querySelector('.q-extra-price');
+    if (priceEl) priceEl.textContent = 'Included';
+    if (!seoEl.querySelector('.q-extra-included-label')) {
+      const lbl = document.createElement('span');
+      lbl.className = 'q-extra-included-label';
+      lbl.textContent = 'in Premium';
+      seoEl.appendChild(lbl);
+    }
+  } else {
+    seoEl.classList.remove('included');
+    const priceEl = seoEl.querySelector('.q-extra-price');
+    if (priceEl) priceEl.textContent = fmt(getAddonPrice(seoEl));
+    const lbl = seoEl.querySelector('.q-extra-included-label');
+    if (lbl) lbl.remove();
+  }
+}
+
+function changePages(delta) {
+  extraPages = Math.max(0, extraPages + delta);
+  document.getElementById('epCount').textContent = extraPages;
+  updateQuote();
+}
+
+function updateQuote() {
+  // Update package prices display
+  document.querySelectorAll('.q-pkg').forEach(p => {
+    p.querySelector('.q-pkg-price').textContent = fmt(getPkgPrice(p));
+  });
+  // Update add-on prices display (skip included)
+  document.querySelectorAll('.q-extra:not(.included)').forEach(ex => {
+    const priceEl = ex.querySelector('.q-extra-price');
+    if (!priceEl || priceEl.textContent === 'Included') return;
+    priceEl.textContent = fmt(getAddonPrice(ex));
+  });
+  // Update pages label
+  const pagesLabel = document.querySelector('.extra-pages-label span');
+  if (pagesLabel) pagesLabel.textContent = 'From ' + fmt(EXTRA_PAGE_PRICE[getCurrency()] || 50) + ' each, beyond your package limit';
+
+  // Calculate total
+  const selPkg = document.querySelector('.q-pkg.selected');
+  let total = 0, rows = [];
+  if (selPkg) {
+    const pkgPrice = getPkgPrice(selPkg);
+    total += pkgPrice;
+    rows.push({ label: selPkg.querySelector('.q-pkg-name').textContent + ' Package', price: pkgPrice });
+  }
+  document.querySelectorAll('.q-extra.selected:not(.included)').forEach(ex => {
+    const p = getAddonPrice(ex);
+    if (p === 0) return;
+    total += p;
+    rows.push({ label: ex.querySelector('.q-extra-name').textContent, price: p });
+  });
+  if (extraPages > 0) {
+    const pp = (EXTRA_PAGE_PRICE[getCurrency()] || 50) * extraPages;
+    total += pp;
+    rows.push({ label: extraPages + ' Additional Page' + (extraPages > 1 ? 's' : ''), price: pp });
+  }
+
+  const bd = document.getElementById('qscBreakdown');
+  bd.innerHTML = rows.length
+    ? rows.map(r => '<div class="qsc-row"><span>' + r.label + '</span><span>' + fmt(r.price) + '</span></div>').join('')
+    : '<p class="qsc-empty">Select a package to begin</p>';
+
+  document.getElementById('qscTotal').textContent = fmt(total);
+  document.getElementById('qscCta').disabled = !selPkg;
+}
+
+function submitQuote() {
+  const name = document.getElementById('qName').value.trim();
+  const email = document.getElementById('qEmail').value.trim();
+  const business = document.getElementById('qBusiness').value.trim();
+  if (!name || !email) { alert('Please fill in your name and email first.'); return; }
+
+  const selPkg = document.querySelector('.q-pkg.selected');
+  const sym = getSym();
+  const total = document.getElementById('qscTotal').textContent;
+  const breakdown = [...document.querySelectorAll('#qscBreakdown .qsc-row')].map(r => r.querySelector('span:first-child').textContent + ': ' + r.querySelector('span:last-child').textContent).join('\n');
+
+  const subject = encodeURIComponent(`Quote Request - ${selPkg ? selPkg.querySelector('.q-pkg-name').textContent : 'Website'} Package`);
+  const body = encodeURIComponent(`Hi Liam,\n\nI'd like to request a quote for the following:\n\n${breakdown}\n\nEstimated Total: ${total}\n\n---\nName: ${name}\nBusiness: ${business || 'N/A'}\nEmail: ${email}`);
+  window.location.href = `mailto:hello@liamdesigns.dev?subject=${subject}&body=${body}`;
+}
+
+// ──────────────────────────────────
+// CONTACT FORM
+// ──────────────────────────────────
+// TODO: Replace YOUR_FORMSPREE_ID below with your actual Formspree endpoint before launch
+// e.g. https://formspree.io/f/abcdefgh
+const FORMSPREE_ID = 'YOUR_FORMSPREE_ID';
+
+function submitContact(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('button[type=submit]');
+  const orig = btn.textContent;
+  const name = document.getElementById('contactName').value;
+  const business = document.getElementById('contactBusiness').value;
+  const email = document.getElementById('contactEmail').value;
+  const message = document.getElementById('contactMessage').value;
+
+  // Fallback to mailto if Formspree ID not set
+  if (!FORMSPREE_ID || FORMSPREE_ID === 'YOUR_FORMSPREE_ID') {
+    const subject = encodeURIComponent('Website Enquiry from ' + name);
+    const body = encodeURIComponent('Name: ' + name + '\nBusiness: ' + business + '\nEmail: ' + email + '\n\nMessage:\n' + message);
+    window.location.href = 'mailto:hello@liamdesigns.dev?subject=' + subject + '&body=' + body;
+    return;
+  }
+
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+
+  fetch('https://formspree.io/f/' + FORMSPREE_ID, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({ name, business, email, message })
+  }).then(r => {
+    if (r.ok) {
+      btn.textContent = 'Sent!';
+      e.target.reset();
+      setTimeout(() => { btn.textContent = orig; btn.disabled = false; }, 3000);
+    } else { throw new Error(); }
+  }).catch(() => {
+    btn.textContent = 'Error, try emailing directly';
+    setTimeout(() => { btn.textContent = orig; btn.disabled = false; }, 3000);
+  });
+}
+
+
+
+// ──────────────────────────────────
+// INIT
+// ──────────────────────────────────
+// Footer year
+const yearEl = document.getElementById('footerYear');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+enforceAddonLogic();
+updateQuote();
 </script>
 
-    <script src="script.js?v=20251207" defer></script>
-    
 </body>
 </html>
