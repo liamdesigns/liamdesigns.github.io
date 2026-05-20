@@ -92,12 +92,25 @@ ul { list-style: none; }
 .pp-cta:hover { background: #6a5ce8; transform: translateY(-1px); }
 
 /* FOOTER */
-.footer { border-top: 1px solid var(--border); padding: 2.5rem 0; }
-.footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
-.footer-copy { font-size: 0.8125rem; color: var(--text-3); }
-.footer-links { display: flex; gap: 1.5rem; }
-.footer-links a { font-size: 0.8125rem; color: var(--text-3); transition: color var(--transition); }
-.footer-links a:hover { color: var(--text); }
+.footer{border-top:1px solid var(--border);padding:3rem 0 2rem;background:linear-gradient(180deg,transparent,rgba(123,108,255,0.03))}
+.footer-top{display:grid;grid-template-columns:1fr auto;gap:4rem;margin-bottom:2.5rem;padding-bottom:2.5rem;border-bottom:1px solid var(--border)}
+.footer-brand{max-width:320px}
+.footer-logo{height:32px;margin-bottom:1rem;opacity:0.85}
+.footer-tagline{font-size:0.875rem;color:var(--text-2);line-height:1.6;margin-bottom:1rem}
+.footer-contact-links{display:flex;flex-direction:column;gap:0.35rem}
+.footer-contact-link{font-size:0.8125rem;color:var(--text-3);transition:color var(--transition)}
+.footer-contact-link:hover{color:var(--accent-2)}
+.footer-nav{display:flex;gap:3rem}
+.footer-nav-col{display:flex;flex-direction:column;gap:0.5rem}
+.footer-nav-label{font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent-2);margin-bottom:0.35rem}
+.footer-nav-col a{font-size:0.8125rem;color:var(--text-3);transition:color var(--transition)}
+.footer-nav-col a:hover{color:var(--text)}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.footer-copy{font-size:0.8rem;color:var(--text-3)}
+.footer-sitemap{font-size:0.8rem;color:var(--text-3);transition:color var(--transition)}
+.footer-sitemap:hover{color:var(--text)}
+@media(max-width:900px){.footer-top{grid-template-columns:1fr;gap:2.5rem}.footer-nav{gap:2rem}}
+@media(max-width:580px){.footer-top{grid-template-columns:1fr}.footer-nav{flex-direction:column;gap:1.5rem}.footer-bottom{flex-direction:column;gap:0.5rem;text-align:center}}
 
 @media (max-width: 700px) {
   .nav-links { display: none; }
@@ -241,15 +254,37 @@ ul { list-style: none; }
   </div>
 </div>
 
-<!-- FOOTER -->
 <footer class="footer">
   <div class="container">
-    <div class="footer-inner">
-      <p class="footer-copy">&copy; 2025 Liam Designs. All rights reserved.</p>
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="privacy-policy.html">Privacy Policy</a>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="logo.png" alt="Liam Designs" class="footer-logo" onerror="this.style.display='none'">
+        <p class="footer-tagline">Custom coded websites for businesses, startups and creators.</p>
+        <div class="footer-contact-links">
+          <a href="mailto:hello@liamdesigns.dev" class="footer-contact-link">hello@liamdesigns.dev</a>
+          <a href="https://www.fiverr.com/liamh96/" target="_blank" rel="noopener" class="footer-contact-link">fiverr.com/liamh96</a>
+        </div>
       </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div class="footer-nav-col">
+          <span class="footer-nav-label">Navigate</span>
+          <a href="index.html#portfolio">Portfolio</a>
+          <a href="index.html#services">Packages</a>
+          <a href="index.html#quote">Get quote</a>
+          <a href="index.html#process">Process</a>
+        </div>
+        <div class="footer-nav-col">
+          <span class="footer-nav-label">More</span>
+          <a href="index.html#about">About</a>
+          <a href="index.html#faq">FAQ</a>
+          <a href="index.html#contact">Contact</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; <span id="footerYear"></span> Liam Designs. All rights reserved.</p>
+      <a href="index.html" class="footer-sitemap">Home</a>
     </div>
   </div>
 </footer>
@@ -265,6 +300,8 @@ function closeMobileNav() {
   navMobile.classList.remove('open');
   hamburger.setAttribute('aria-expanded', false);
 }
+const yearEl = document.getElementById('footerYear');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 </script>
 
 </body>
