@@ -185,10 +185,13 @@ section{padding:clamp(4rem,8vw,7rem) 0}
    PORTFOLIO
 ═══════════════════════════════════════ */
 .portfolio-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.5rem}
+.port-card{background:var(--ink-2);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:border-color var(--transition),transform var(--transition)}
 .port-card{background:var(--ink-2);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:border-color var(--transition),transform var(--transition);group}
 .port-card:hover{border-color:var(--border-2);transform:translateY(-4px)}
 .port-img-wrap{position:relative;overflow:hidden;aspect-ratio:16/10}
 .port-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s cubic-bezier(0.4,0,0.2,1)}
+.port-img-bg{width:100%;height:100%;background-size:cover;background-position:center;transition:transform 0.5s cubic-bezier(0.4,0,0.2,1);pointer-events:none}
+.port-card:hover .port-img-bg{transform:scale(1.04)}
 .port-card:hover .port-img-wrap img{transform:scale(1.04)}
 .port-overlay{position:absolute;inset:0;background:rgba(11,11,15,0.7);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity var(--transition);backdrop-filter:blur(4px)}
 .port-card:hover .port-overlay{opacity:1}
@@ -198,6 +201,8 @@ section{padding:clamp(4rem,8vw,7rem) 0}
 .port-tag{font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent-2);font-weight:600;margin-bottom:0.4rem}
 .port-title{font-size:1.125rem;font-weight:600;margin-bottom:0.4rem}
 .port-desc{font-size:0.875rem;color:var(--text-2);line-height:1.6}
+.port-demo-link{display:none;align-items:center;gap:0.4rem;margin-top:0.85rem;font-size:0.8rem;font-weight:600;color:var(--accent-2);border:1px solid var(--border-2);border-radius:8px;padding:0.4rem 0.85rem;transition:border-color var(--transition)}
+.port-demo-link:hover{border-color:var(--accent)}
 
 /* ═══════════════════════════════════════
    SERVICES / PACKAGES
@@ -237,8 +242,8 @@ section{padding:clamp(4rem,8vw,7rem) 0}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
 .about-text p{color:var(--text-2);line-height:1.8;margin-bottom:1.25rem;font-size:0.9375rem}
 .about-text p:last-child{margin-bottom:0}
-.skills-wrap{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:2rem}
-.skill-pill{padding:0.35rem 0.85rem;background:var(--ink-3);border:1px solid var(--border);border-radius:999px;font-size:0.78rem;color:var(--text-2);transition:border-color var(--transition),color var(--transition)}
+.skills-wrap{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1.75rem}
+.skill-pill{padding:0.28rem 0.65rem;background:var(--ink-3);border:1px solid var(--border);border-radius:999px;font-size:0.73rem;color:var(--text-2);transition:border-color var(--transition),color var(--transition);white-space:nowrap}
 .skill-pill:hover{border-color:var(--accent);color:var(--accent-2)}
 .about-stats{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
 .stat-card{background:var(--ink-2);border:1px solid var(--border);border-radius:14px;padding:1.75rem;transition:border-color var(--transition)}
@@ -250,6 +255,12 @@ section{padding:clamp(4rem,8vw,7rem) 0}
    QUOTE BUILDER
 ═══════════════════════════════════════ */
 .quote-section{background:var(--ink-2)}
+.quote-mobile-toggle{display:none;width:100%;background:var(--accent);border:none;border-radius:12px;color:#fff;font-size:1rem;font-weight:600;padding:1rem 1.5rem;cursor:pointer;font-family:inherit;align-items:center;justify-content:space-between;gap:0.75rem;margin-bottom:1.5rem;transition:background var(--transition)}
+.quote-mobile-toggle:hover{background:#6a5ce8}
+.quote-mobile-toggle svg{flex-shrink:0;transition:transform 0.3s ease}
+.quote-mobile-toggle.open svg{transform:rotate(180deg)}
+.quote-mobile-toggle-left{display:flex;align-items:center;gap:0.6rem}
+.quote-collapsible{transition:max-height 0.4s cubic-bezier(0.4,0,0.2,1),opacity 0.3s ease;overflow:hidden}
 .quote-wrap{display:grid;grid-template-columns:1fr 380px;gap:3rem;align-items:stretch}
 .quote-form-panel{display:flex;flex-direction:column;gap:2rem}
 .q-step{background:var(--ink-3);border:1px solid var(--border);border-radius:14px;padding:1.5rem}
@@ -338,6 +349,11 @@ section{padding:clamp(4rem,8vw,7rem) 0}
 .form-input::placeholder{color:var(--text-3)}
 textarea.form-input{resize:vertical;min-height:130px}
 .form-note{font-size:0.78rem;color:var(--text-3);margin-top:0.75rem}
+.contact-mobile-toggle{display:none;width:100%;background:var(--ink-2);border:1px solid var(--border-2);border-radius:12px;color:var(--text);font-size:1rem;font-weight:600;padding:1rem 1.5rem;cursor:pointer;font-family:inherit;align-items:center;justify-content:space-between;gap:0.75rem;margin-bottom:1rem;transition:border-color var(--transition)}
+.contact-mobile-toggle:hover{border-color:var(--accent)}
+.contact-mobile-toggle svg{flex-shrink:0;transition:transform 0.3s ease}
+.contact-mobile-toggle.open svg{transform:rotate(180deg)}
+.contact-collapsible{transition:max-height 0.4s cubic-bezier(0.4,0,0.2,1),opacity 0.3s ease;overflow:hidden}
 
 /* ═══════════════════════════════════════
    FIVERR BANNER
@@ -399,21 +415,143 @@ textarea.form-input{resize:vertical;min-height:130px}
   .contact-wrap{grid-template-columns:1fr;gap:3rem}
   .nav-links{display:none}
   .nav-hamburger{display:flex}
-  .fiverr-feats{gap:1.25rem}
-  .footer-top{grid-template-columns:1fr;gap:2.5rem}
-  .footer-nav{gap:2rem}
+  .fiverr-banner{padding:1.5rem;border-radius:14px}
+  .fiverr-h2{font-size:1.4rem;margin-bottom:0.5rem}
+  .fiverr-sub{font-size:0.875rem;margin-bottom:1.25rem}
+  .fiverr-feats{display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;margin-bottom:1.5rem;justify-items:start}
+  .fiverr-feat{font-size:0.8rem}
+  .fiverr-badge{margin-bottom:0.75rem}
+  .footer-top{grid-template-columns:1fr;gap:2rem}
+  .footer-nav{gap:2rem;flex-wrap:wrap}
 }
 @media(max-width:580px){
-  .hero-trust{flex-direction:column;gap:0.75rem}
-  .packages-grid{grid-template-columns:1fr}
-  .process-grid{grid-template-columns:1fr}
-  .about-stats{grid-template-columns:1fr}
+  .process-grid::before{display:none}
+  /* Hero mobile tightening */
+  .hero-orb-2{display:none}
+  .hero-label{display:none}
+  .hero-h1{font-size:clamp(2.2rem,9vw,3rem);margin-bottom:1rem}
+  .hero-desc{font-size:1rem;margin-bottom:1.5rem}
+  .hero-actions{gap:0.6rem}
+  .btn-lg{padding:0.7rem 1.4rem;font-size:0.9rem}
+  .hero-trust{
+    flex-direction:row;
+    flex-wrap:wrap;
+    gap:0.4rem;
+    margin-top:1.1rem;
+    padding-top:1rem;
+    border-top:1px solid var(--border);
+  }
+  .hero-trust-item{
+    background:var(--ink-2);
+    border:1px solid var(--border);
+    border-radius:999px;
+    padding:0.28rem 0.65rem;
+    font-size:0.7rem;
+    gap:0.28rem;
+    color:var(--text-2);
+  }
+  .hero-trust-item strong{font-size:0.7rem;color:var(--text-2)}
+  .hero-trust-item svg{width:10px;height:10px;color:var(--accent)}
+  .process-grid{grid-template-columns:1fr 1fr;gap:1.25rem}
+  .about-stats{grid-template-columns:1fr 1fr;gap:0.75rem}
   .q-grid-2{grid-template-columns:1fr}
   .q-extras{grid-template-columns:1fr}
-  .portfolio-grid{grid-template-columns:1fr}
-  .footer-top{grid-template-columns:1fr}
-  .footer-nav{flex-direction:column;gap:1.5rem}
-  .footer-bottom{flex-direction:column;gap:0.5rem;text-align:center}
+  .footer-top{grid-template-columns:1fr;gap:1.5rem}
+  .footer-nav{flex-direction:row;gap:2rem;flex-wrap:wrap}
+  .footer-nav-col{flex:1;min-width:100px}
+  .footer-bottom{flex-direction:column;gap:0.4rem;text-align:center}
+  .footer-brand{max-width:100%}
+  .footer-tagline{font-size:0.8rem;margin-bottom:0.6rem}
+  .footer-logo{height:26px;margin-bottom:0.65rem}
+
+  /* ── PORTFOLIO horizontal scroll ── */
+  .portfolio-grid{
+    display:flex;
+    flex-direction:row;
+    overflow-x:auto;
+    overflow-y:hidden;
+    scroll-snap-type:x mandatory;
+    scroll-behavior:smooth;
+    -webkit-overflow-scrolling:touch;
+    overscroll-behavior-x:contain;
+    touch-action:pan-x pan-y;
+    gap:1rem;
+    padding-bottom:1rem;
+    scrollbar-width:none;
+    grid-template-columns:unset;
+  }
+  .portfolio-grid::-webkit-scrollbar{display:none}
+  .port-card{
+    flex:0 0 82vw;
+    max-width:340px;
+    scroll-snap-align:start;
+    scroll-snap-stop:normal;
+    overflow:hidden;
+    touch-action:pan-x pan-y;
+  }
+  .port-img-wrap{
+    overflow:hidden;
+    border-radius:16px 16px 0 0;
+  }
+  .port-overlay{display:none}
+  .port-demo-link{display:inline-flex}
+
+  /* ── PACKAGES horizontal scroll ── */
+  .packages-grid{
+    display:flex;
+    flex-direction:row;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+    gap:0.85rem;
+    padding-bottom:1rem;
+    padding-right:1.5rem;
+    scrollbar-width:none;
+    grid-template-columns:unset;
+    align-items:stretch;
+  }
+  .packages-grid::-webkit-scrollbar{display:none}
+  .pkg{
+    flex:0 0 76vw;
+    max-width:300px;
+    scroll-snap-align:start;
+    height:auto;
+    padding:1.4rem;
+  }
+  .pkg-tagline{min-height:unset}
+  .pkg-price{font-size:2.2rem}
+  .pkg-features{margin-bottom:1.25rem}
+
+  /* ── QUOTE BUILDER mobile toggle ── */
+  .quote-mobile-toggle{display:flex}
+  .quote-collapsible{max-height:0;opacity:0}
+  .quote-collapsible.open{max-height:2000px;opacity:1}
+  .quote-wrap{gap:1.5rem}
+  .quote-sidebar{position:static}
+
+  /* ── CONTACT mobile toggle ── */
+  .contact-mobile-toggle{display:flex}
+  .contact-collapsible{max-height:0;opacity:0}
+  .contact-collapsible.open{max-height:1000px;opacity:1}
+  .contact-wrap{gap:1.5rem}
+
+  /* Scroll hint fade for packages */
+  .scroll-hint{display:flex;align-items:center;gap:0.4rem;font-size:0.72rem;color:var(--text-3);margin-top:0.75rem;justify-content:center}
+  .scroll-hint svg{animation:nudge 1.5s ease-in-out infinite}
+  @keyframes nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(4px)}}
+  .stat-card{padding:1.1rem}
+  .stat-num{font-size:1.9rem}
+  .stat-label{font-size:0.75rem}
+  .proc-num{width:44px;height:44px}
+  .proc-title{font-size:0.85rem}
+  .proc-desc{font-size:0.75rem}
+  .skill-pill{padding:0.22rem 0.55rem;font-size:0.68rem}
+  .skills-wrap{gap:0.3rem;margin-top:1.25rem}
+}
+@media(min-width:581px){
+  .scroll-hint{display:none}
+  .quote-collapsible{max-height:none!important;opacity:1!important}
+  .contact-collapsible{max-height:none!important;opacity:1!important}
 }
 </style>
 </head>
@@ -567,38 +705,42 @@ textarea.form-input{resize:vertical;min-height:130px}
     <div class="portfolio-grid">
       <div class="port-card reveal">
         <div class="port-img-wrap">
-          <img src="portfolio/Velion.png" alt="VELION Finance Platform" width="600" height="375" loading="lazy">
+          <div class="port-img-bg" style="background-image:url('portfolio/Velion.png')" role="img" aria-label="VELION Finance Platform"></div>
           <div class="port-overlay"><a href="portfolio/Velion/" target="_blank">View VELION Demo</a></div>
         </div>
         <div class="port-info">
           <p class="port-tag">Finance</p>
           <h3 class="port-title">VELION</h3>
           <p class="port-desc">A bright, balanced design with smooth gradients and crisp typography, polished and built for trust.</p>
+          <a href="portfolio/Velion/" target="_blank" class="port-demo-link">View demo <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg></a>
         </div>
       </div>
       <div class="port-card reveal reveal-delay-1">
         <div class="port-img-wrap">
-          <img src="portfolio/NovaFrame.png" alt="NovaFrame Engineering Website" width="600" height="375" loading="lazy">
+          <div class="port-img-bg" style="background-image:url('portfolio/NovaFrame.png')" role="img" aria-label="NovaFrame Engineering Website"></div>
           <div class="port-overlay"><a href="portfolio/NovaFrame/" target="_blank">View NovaFrame Demo</a></div>
         </div>
         <div class="port-info">
           <p class="port-tag">Engineering</p>
           <h3 class="port-title">NovaFrame</h3>
           <p class="port-desc">Dark, futuristic interface with glowing accents and precise structure. A tech-driven aesthetic built for serious engineering.</p>
+          <a href="portfolio/NovaFrame/" target="_blank" class="port-demo-link">View demo <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg></a>
         </div>
       </div>
       <div class="port-card reveal reveal-delay-2">
         <div class="port-img-wrap">
-          <img src="portfolio/BrightWave.png" alt="BrightWave Electrical" width="600" height="375" loading="lazy">
+          <div class="port-img-bg" style="background-image:url('portfolio/BrightWave.png')" role="img" aria-label="BrightWave Electrical"></div>
           <div class="port-overlay"><a href="portfolio/BrightWave/" target="_blank">View BrightWave Demo</a></div>
         </div>
         <div class="port-info">
           <p class="port-tag">Trades</p>
           <h3 class="port-title">BrightWave Electrical</h3>
           <p class="port-desc">Polished dark theme highlighting expertise, trust and reliability for a professional trade business.</p>
+          <a href="portfolio/BrightWave/" target="_blank" class="port-demo-link">View demo <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg></a>
         </div>
       </div>
     </div>
+    <div class="scroll-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>Swipe to see more</div>
   </div>
   </div>
 </section>
@@ -673,6 +815,8 @@ textarea.form-input{resize:vertical;min-height:130px}
         <a href="#quote" class="btn btn-gold pkg-cta" style="text-align:center;justify-content:center;">Get started</a>
       </div>
     </div>
+  <div class="scroll-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>Swipe to compare</div>
+  <div class="scroll-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>Swipe to compare packages</div>
   </div>
 </section>
 
@@ -702,7 +846,15 @@ textarea.form-input{resize:vertical;min-height:130px}
       <h2 class="section-title reveal reveal-delay-1">Get Your Quote</h2>
       <p class="section-sub reveal reveal-delay-2">Build your package and see an estimated price in real time.</p>
     </div>
+    <button class="quote-mobile-toggle" id="quoteMobileToggle" onclick="toggleQuotePanel()" aria-expanded="false">
+      <div class="quote-mobile-toggle-left">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"/></svg>
+        Build your quote
+      </div>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
+    </button>
     <div class="quote-wrap">
+      <div class="quote-collapsible" id="quoteCollapsible">
       <div class="quote-form-panel">
 
         <!-- Step 1 -->
@@ -820,6 +972,7 @@ textarea.form-input{resize:vertical;min-height:130px}
         </div>
 
       </div>
+      </div><!-- /quote-collapsible -->
 
       <!-- SIDEBAR SUMMARY -->
       <div class="quote-sidebar">
@@ -1029,6 +1182,11 @@ textarea.form-input{resize:vertical;min-height:130px}
         </a>
       </div>
       <div class="reveal reveal-delay-1">
+        <button class="contact-mobile-toggle" id="contactMobileToggle" onclick="toggleContactForm()" aria-expanded="false">
+          <span>Send me a message</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
+        </button>
+        <div class="contact-collapsible" id="contactCollapsible">
         <form id="contactForm" onsubmit="submitContact(event)">
           <div class="form-group">
             <label class="form-label" for="contactName">Your name</label>
@@ -1049,6 +1207,7 @@ textarea.form-input{resize:vertical;min-height:130px}
           <button type="submit" class="btn btn-primary btn-lg" style="width:100%">Send Message</button>
           <p class="form-note">I'll get back to you within 24 hours</p>
         </form>
+        </div><!-- /contact-collapsible -->
       </div>
     </div>
   </div>
@@ -1320,6 +1479,27 @@ function submitContact(e) {
 }
 
 
+
+// ──────────────────────────────────
+// MOBILE TOGGLES
+// ──────────────────────────────────
+function toggleQuotePanel() {
+  const btn = document.getElementById('quoteMobileToggle');
+  const panel = document.getElementById('quoteCollapsible');
+  if (!btn || !panel) return;
+  const isOpen = panel.classList.toggle('open');
+  btn.classList.toggle('open', isOpen);
+  btn.setAttribute('aria-expanded', isOpen);
+}
+
+function toggleContactForm() {
+  const btn = document.getElementById('contactMobileToggle');
+  const panel = document.getElementById('contactCollapsible');
+  if (!btn || !panel) return;
+  const isOpen = panel.classList.toggle('open');
+  btn.classList.toggle('open', isOpen);
+  btn.setAttribute('aria-expanded', isOpen);
+}
 
 // ──────────────────────────────────
 // INIT
