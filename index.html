@@ -169,11 +169,13 @@ input,textarea,select{font-family:inherit}
    MARQUEE STRIP
 ═══════════════════════════════════════ */
 .marquee-strip{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:1rem 0;overflow:hidden;mask-image:linear-gradient(90deg,transparent,black 10%,black 90%,transparent)}
-.marquee-track{display:flex;gap:0;animation:marquee-scroll 30s linear infinite}
-.marquee-track:hover{animation-play-state:paused}
+.marquee-track{display:flex;gap:0}
+.marquee-track:hover .marquee-set{animation-play-state:paused}
+.marquee-set{display:flex;flex-shrink:0;animation:marquee-scroll 30s linear infinite}
 .marquee-item{display:flex;align-items:center;gap:0.75rem;white-space:nowrap;padding:0 2.5rem;font-size:0.8125rem;color:var(--text-3);font-weight:500;letter-spacing:0.04em}
 .marquee-item svg{color:var(--accent);flex-shrink:0;opacity:0.7}
-@keyframes marquee-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes marquee-scroll{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+@media(max-width:580px){.marquee-set{animation-duration:30s}}
 
 /* ═══════════════════════════════════════
    SECTION COMMONS
@@ -715,27 +717,18 @@ textarea.form-input{resize:vertical;min-height:130px}
 <!-- MARQUEE -->
 <div class="marquee-strip">
   <div class="marquee-track" id="marqueeTrack">
-    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>HTML &amp; CSS</div>
-    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Vanilla JavaScript</div>
-    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Fully Responsive</div>
-    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>SEO Optimised</div>
-    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Performance Focused</div>
-    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>No Templates</div>
-    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>UK Based</div>
-    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Static Hosting Setup</div>
-    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Fast Delivery</div>
-    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Available on Fiverr</div>
-    <!-- duplicate for seamless loop -->
-    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>HTML &amp; CSS</div>
-    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Vanilla JavaScript</div>
-    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Fully Responsive</div>
-    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>SEO Optimised</div>
-    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Performance Focused</div>
-    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>No Templates</div>
-    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>UK Based</div>
-    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Static Hosting Setup</div>
-    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Fast Delivery</div>
-    <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Available on Fiverr</div>
+    <div class="marquee-set" id="marqueeSet">
+      <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>HTML &amp; CSS</div>
+      <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Vanilla JavaScript</div>
+      <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Fully Responsive</div>
+      <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>SEO Optimised</div>
+      <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Performance Focused</div>
+      <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>No Templates</div>
+      <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>UK Based</div>
+      <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Static Hosting Setup</div>
+      <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Fast Delivery</div>
+      <div class="marquee-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Available on Fiverr</div>
+    </div>
   </div>
 </div>
 
@@ -1315,6 +1308,22 @@ function closeMobileNav() {
   navMobile.classList.remove('open');
   hamburger.setAttribute('aria-expanded', false);
 }
+
+// ──────────────────────────────────
+// MARQUEE - clone set so loop is always seamless
+// ──────────────────────────────────
+(function() {
+  const set = document.getElementById('marqueeSet');
+  const track = document.getElementById('marqueeTrack');
+  if (!set || !track) return;
+  // Clone enough times to always overfill the viewport
+  const copies = Math.ceil((window.innerWidth * 3) / set.scrollWidth) + 1;
+  for (let i = 0; i < copies; i++) {
+    const clone = set.cloneNode(true);
+    clone.removeAttribute('id');
+    track.appendChild(clone);
+  }
+})();
 
 // ──────────────────────────────────
 // SCROLL REVEAL
