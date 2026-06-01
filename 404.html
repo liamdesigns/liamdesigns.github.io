@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — Page Not Found | Liam Designs</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/x-icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink:         #0b0b0f;
+  --ink-2:       #111118;
+  --ink-3:       #18181f;
+  --border:      rgba(255,255,255,0.07);
+  --border-2:    rgba(255,255,255,0.12);
+  --text:        #e8e6f0;
+  --text-2:      #9896a8;
+  --text-3:      #5e5c6e;
+  --accent:      #7b6cff;
+  --accent-2:    #a99fff;
+  --accent-glow: rgba(123,108,255,0.18);
+  --gold:        #c9a96e;
+  --font-display:'DM Serif Display', Georgia, serif;
+  --font-body:   'DM Sans', system-ui, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--ink);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── BACKGROUND ── */
+.bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent);
+}
+
+.bg-orb-1 {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(123,108,255,0.22), transparent 70%);
+  top: -200px;
+  right: -100px;
+  filter: blur(60px);
+  animation: drift-1 8s ease-in-out infinite alternate;
+}
+
+.bg-orb-2 {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,169,110,0.12), transparent 70%);
+  bottom: -100px;
+  left: -100px;
+  filter: blur(60px);
+  animation: drift-2 10s ease-in-out infinite alternate;
+}
+
+@keyframes drift-1 { from { transform: translate(0,0); } to { transform: translate(-30px, 40px); } }
+@keyframes drift-2 { from { transform: translate(0,0); } to { transform: translate(40px, -30px); } }
+
+/* ── CONTENT ── */
+.page {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  max-width: 540px;
+  animation: fade-up 0.7s cubic-bezier(0.4,0,0.2,1) both;
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── 404 GLYPH ── */
+.four-oh-four {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.fof-num {
+  font-family: var(--font-display);
+  font-size: clamp(7rem, 22vw, 11rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(123,108,255,0.35);
+  position: relative;
+  user-select: none;
+}
+
+.fof-num::before {
+  content: '404';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2), var(--gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 0;
+  opacity: 0.18;
+}
+
+.fof-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 6px;
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), var(--accent-2), transparent);
+  opacity: 0.5;
+}
+
+/* ── TEXT ── */
+.eyebrow {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  margin-bottom: 0.75rem;
+  animation: fade-up 0.7s 0.1s cubic-bezier(0.4,0,0.2,1) both;
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 5vw, 2.25rem);
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+  animation: fade-up 0.7s 0.15s cubic-bezier(0.4,0,0.2,1) both;
+}
+
+.headline em {
+  font-style: italic;
+  color: var(--accent-2);
+}
+
+.subtext {
+  font-size: 0.9375rem;
+  color: var(--text-2);
+  line-height: 1.7;
+  margin-bottom: 2.25rem;
+  animation: fade-up 0.7s 0.2s cubic-bezier(0.4,0,0.2,1) both;
+}
+
+/* ── ACTIONS ── */
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 3rem;
+  animation: fade-up 0.7s 0.25s cubic-bezier(0.4,0,0.2,1) both;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.65rem 1.4rem;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: inherit;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.4,0,0.2,1);
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #6a5ce8;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(123,108,255,0.35);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--border-2);
+  color: var(--text-2);
+}
+.btn-outline:hover {
+  border-color: var(--accent);
+  color: var(--text);
+  background: var(--accent-glow);
+}
+
+/* ── QUICK LINKS ── */
+.quick-links {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  animation: fade-up 0.7s 0.3s cubic-bezier(0.4,0,0.2,1) both;
+}
+
+.quick-link {
+  font-size: 0.8rem;
+  color: var(--text-3);
+  text-decoration: none;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.quick-link:hover { color: var(--accent-2); }
+
+.quick-link svg { opacity: 0.6; }
+
+/* ── LOGO ── */
+.logo-wrap {
+  position: fixed;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  animation: fade-up 0.5s cubic-bezier(0.4,0,0.2,1) both;
+}
+
+.logo-wrap img {
+  height: 32px;
+  width: auto;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 480px) {
+  .actions { flex-direction: column; align-items: center; }
+  .btn { width: 200px; justify-content: center; }
+}
+</style>
+</head>
+<body>
+
+<div class="bg">
+  <div class="bg-grid"></div>
+  <div class="bg-orb-1"></div>
+  <div class="bg-orb-2"></div>
+</div>
+
+<a href="index.html" class="logo-wrap" aria-label="Liam Designs home">
+  <img src="logo.png" alt="Liam Designs" onerror="this.style.display='none'">
+</a>
+
+<main class="page" role="main">
+
+  <div class="four-oh-four" aria-hidden="true">
+    <div class="fof-num">404</div>
+    <div class="fof-line"></div>
+  </div>
+
+  <p class="eyebrow">Page not found</p>
+
+  <h1 class="headline">
+    This page doesn't<br><em>exist yet.</em>
+  </h1>
+
+  <p class="subtext">
+    The page you're looking for has moved, been removed, or never existed.<br>
+    Let's get you back somewhere useful.
+  </p>
+
+  <div class="actions">
+    <a href="index.html" class="btn btn-primary">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+      Back to home
+    </a>
+    <a href="index.html#contact" class="btn btn-outline">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      Get in touch
+    </a>
+  </div>
+
+  <nav class="quick-links" aria-label="Quick links">
+    <a href="index.html#portfolio" class="quick-link">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      Portfolio
+    </a>
+    <a href="index.html#services" class="quick-link">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      Packages
+    </a>
+    <a href="index.html#quote" class="quick-link">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      Get a quote
+    </a>
+    <a href="index.html#faq" class="quick-link">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      FAQ
+    </a>
+  </nav>
+
+</main>
+
+</body>
+</html>
