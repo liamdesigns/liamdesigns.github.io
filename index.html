@@ -263,7 +263,7 @@ section{padding:clamp(4rem,8vw,7rem) 0}
 .quote-mobile-toggle.open svg{transform:rotate(180deg)}
 .quote-mobile-toggle-left{display:flex;align-items:center;gap:0.6rem}
 .quote-collapsible{transition:max-height 0.4s cubic-bezier(0.4,0,0.2,1),opacity 0.3s ease;overflow:hidden}
-.quote-wrap{display:grid;grid-template-columns:1fr 380px;gap:3rem;align-items:stretch}
+.quote-wrap{display:grid;grid-template-columns:1fr 380px;gap:3rem;align-items:start}
 .quote-form-panel{display:flex;flex-direction:column;gap:2rem}
 .q-step{background:var(--ink-3);border:1px solid var(--border);border-radius:14px;padding:1.5rem}
 .q-step-head{display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem}
@@ -850,6 +850,7 @@ textarea.form-input{resize:vertical;min-height:130px}
         <ul class="pkg-features">
           <li class="pkg-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Up to 5 custom pages</li>
           <li class="pkg-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Enhanced SEO optimisation</li>
+          <li class="pkg-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Performance optimisation</li>
           <li class="pkg-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Premium UI/UX styling</li>
           <li class="pkg-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Enhanced interactions</li>
           <li class="pkg-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Priority post-delivery support</li>
@@ -980,20 +981,20 @@ textarea.form-input{resize:vertical;min-height:130px}
               <span class="q-extra-name">Contact Form Setup</span>
               <span class="q-extra-price">£25</span>
             </div>
-            <div class="q-extra" data-gbp="35" data-usd="35" data-key="analytics" onclick="toggleExtra(this)">
+            <div class="q-extra" data-gbp="50" data-usd="50" data-key="analyticsprivacy" onclick="toggleExtra(this)">
               <div class="q-checkbox"></div>
-              <span class="q-extra-name">Analytics and Cookie Banner</span>
-              <span class="q-extra-price">£35</span>
-            </div>
-            <div class="q-extra" data-gbp="20" data-usd="20" data-key="privacy" onclick="toggleExtra(this)">
-              <div class="q-checkbox"></div>
-              <span class="q-extra-name">Privacy Policy Page</span>
-              <span class="q-extra-price">£20</span>
+              <span class="q-extra-name">Analytics, Cookie Banner and Privacy Policy</span>
+              <span class="q-extra-price">£50</span>
             </div>
             <div class="q-extra" data-gbp="50" data-usd="50" data-key="seo" onclick="toggleExtra(this)">
               <div class="q-checkbox"></div>
               <span class="q-extra-name">Enhanced SEO Package</span>
               <span class="q-extra-price" id="seoExtraPrice">£50</span>
+            </div>
+            <div class="q-extra" data-gbp="75" data-usd="75" data-key="perf" onclick="toggleExtra(this)">
+              <div class="q-checkbox"></div>
+              <span class="q-extra-name">Performance Optimisation</span>
+              <span class="q-extra-price" id="perfExtraPrice">£75</span>
             </div>
             <div class="q-extra" data-gbp="25" data-usd="25" data-key="revision" onclick="toggleExtra(this)">
               <div class="q-checkbox"></div>
@@ -1366,8 +1367,8 @@ const PKG_PRICES = {
   USD: { basic: 99, standard: 299, premium: 799 }
 };
 const ADDON_PRICES = {
-  GBP: { logo: 50, contact: 25, analytics: 35, privacy: 20, seo: 50, revision: 25 },
-  USD: { logo: 50, contact: 25, analytics: 35, privacy: 20, seo: 50, revision: 25 }
+  GBP: { logo: 50, contact: 25, analyticsprivacy: 50, seo: 50, perf: 75, revision: 25 },
+  USD: { logo: 50, contact: 25, analyticsprivacy: 50, seo: 50, perf: 75, revision: 25 }
 };
 const EXTRA_PAGE_PRICE = { GBP: 50, USD: 50 };
 const CURRENCY_SYMS = { GBP: '£', USD: '$' };
@@ -1403,29 +1404,34 @@ function toggleExtra(el) {
   updateQuote();
 }
 
-function enforceAddonLogic() {
-  const selPkg = document.querySelector('.q-pkg.selected');
-  const pkg = selPkg ? selPkg.dataset.pkg : null;
-  const seoEl = document.querySelector('.q-extra[data-key="seo"]');
-  if (!seoEl) return;
-  if (pkg === 'premium') {
-    seoEl.classList.remove('selected');
-    seoEl.classList.add('included');
-    const priceEl = seoEl.querySelector('.q-extra-price');
+function enforceIncluded(key, isPremium) {
+  const el = document.querySelector('.q-extra[data-key="' + key + '"]');
+  if (!el) return;
+  if (isPremium) {
+    el.classList.remove('selected');
+    el.classList.add('included');
+    const priceEl = el.querySelector('.q-extra-price');
     if (priceEl) priceEl.textContent = 'Included';
-    if (!seoEl.querySelector('.q-extra-included-label')) {
+    if (!el.querySelector('.q-extra-included-label')) {
       const lbl = document.createElement('span');
       lbl.className = 'q-extra-included-label';
       lbl.textContent = 'in Premium';
-      seoEl.appendChild(lbl);
+      el.appendChild(lbl);
     }
   } else {
-    seoEl.classList.remove('included');
-    const priceEl = seoEl.querySelector('.q-extra-price');
-    if (priceEl) priceEl.textContent = fmt(getAddonPrice(seoEl));
-    const lbl = seoEl.querySelector('.q-extra-included-label');
+    el.classList.remove('included');
+    const priceEl = el.querySelector('.q-extra-price');
+    if (priceEl) priceEl.textContent = fmt(getAddonPrice(el));
+    const lbl = el.querySelector('.q-extra-included-label');
     if (lbl) lbl.remove();
   }
+}
+
+function enforceAddonLogic() {
+  const selPkg = document.querySelector('.q-pkg.selected');
+  const isPremium = selPkg ? selPkg.dataset.pkg === 'premium' : false;
+  enforceIncluded('seo', isPremium);
+  enforceIncluded('perf', isPremium);
 }
 
 function changePages(delta) {
